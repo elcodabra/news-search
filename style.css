@@ -76,17 +76,12 @@
   flex: 0 0 100%;
   max-width: 100%;
 }
-
-.first-section {
+.header{
   background-image: url(img/georgia-de-lotz-bg.png);
-  height: 576px;
-  background-position: center;
-  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
-
-header {
-  border-bottom: 1px solid #c4c4c475;
-  height: 81px;
+.main-header{
+  border-top: 1px solid #c4c4c475;
 }
 
 .logo a {
@@ -104,7 +99,7 @@ header {
 .header-nav ul {
   display: flex;
   justify-content: flex-end;
-  margin: 30px 101px 26px 0;
+  margin: 30px 101px 23px 0;
 }
 
 .header-nav__item a {
@@ -152,10 +147,13 @@ header {
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 19px;
   line-height: 24px;
   color: #fff;
   margin-top: 32px;
+}
+.block-imputs{
+  margin-bottom: 80px;
 }
 
 .main-content-search {
@@ -390,7 +388,7 @@ footer {
   .header-nav ul {
     display: flex;
     justify-content: flex-end;
-    margin: 16px 14px 16px 0px;
+    margin: 16px 14px 13px 0px;
   }
 
   .active::after {
@@ -507,13 +505,8 @@ footer {
     padding: 0 0px;
   }
 
-  header {
-    border-bottom: 1px solid #c4c4c475;
-    height: 56px;
-  }
-
   .active::after {
-    top: 11.5px;
+    top: 12.5px;
   }
 
   .second-section-content__img {
