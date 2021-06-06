@@ -1,0 +1,290 @@
+.header {
+  background-image: url(img/georgia-de-lotz-bg.png);
+  background-repeat: no-repeat;
+}
+
+.header__bg-img {
+  height: 576px;
+}
+
+.header__top {
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.header__top-inner {
+  display: flex;
+}
+
+.header__logo {
+  width: 50%;
+  margin: 30px 0 23px 104px;
+}
+
+.header__logo-link {
+  text-decoration: none;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.header__menu {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 101px;
+}
+
+.header__list-item {
+  list-style-type: none;
+  margin: 30px 0 23px 0;
+}
+
+.header__list-item:nth-child(1) {
+  margin-right: 34px;
+}
+
+.header__link-item {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.header__link-item--active::after {
+  position: relative;
+  content: "";
+  width: 100%;
+  background-color: #fff;
+  height: 3px;
+  display: block;
+  top: 23px;
+}
+
+.header__content-inner {
+  margin-left: 416px;
+}
+
+.header__content-title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 64px;
+  color: #FFFFFF;
+  max-width: 608px;
+  margin-top: 0px;
+  padding-top: 80px;
+}
+
+.header__content-description {
+  max-width: 545px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-top: 32px;
+}
+
+
+::-webkit-input-placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+}
+.form-search__block-input{
+  background: #FFFFFF;
+  border: 1px solid #D1D2D6;
+  box-sizing: border-box;
+  border-radius: 100px;
+  width: 608px;
+  height: 64px;
+}
+.form-search__input-text{
+  width: 376px;
+  height: 22px;
+  margin: 21px 0 0 24px;
+  border: none;
+  outline: none;
+}
+.form-search__block-btn{
+  position: relative;
+}
+.form-search__input-btn{
+  position: absolute;
+  width: 168px;
+  height: 64px;
+  background: #2F71E5;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  top: -64px;
+  right: 324px;
+}
+.form-search{
+  margin-top: 64px;
+}
+
+
+
+
+@media (max-width: 767px) {
+  .header {
+    background-image: url(img/georgia-de-lotz-mobile.png);
+    background-repeat: no-repeat;
+  }
+  .header__content-inner {
+    margin-left: 0px;
+  }
+  .search-form__content {
+    width: 288px; 
+   display: flex;
+   flex-direction: column;
+}
+.header__bg-img {
+  height: 536px;
+}
+.search-form__input-item {
+  width: 256px;
+  height: 22px;
+  border: none;
+  outline: none;
+  margin: 17px 0 0 16px;
+}
+.header__logo {
+  width: 40%;
+  margin: 16px 0px 16px 16px;
+}
+.header__logo-link {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+.header__menu {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 14px;
+}
+.header__list-item {
+  list-style-type: none;
+  margin: 16px 0 16px 0;
+}
+.header__link-item {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.header__list-item:nth-child(1) {
+  margin-right: 11px;
+}
+.header__link-item--active::after {
+  position: relative;
+  content: "";
+  width: 100%;
+  background-color: #fff;
+  height: 3px;
+  display: block;
+  top: 16px;
+}
+.header__content-title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: #FFFFFF;
+  margin-top: 0px;
+  padding-top: 30px;
+  margin-left: 19px;
+}
+.header__content-description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+  margin: 56px 16px 0 16px;
+}
+.form-search__block-input{
+  background: #FFFFFF;
+  border: 1px solid #D1D2D6;
+  box-sizing: border-box;
+  border-radius: 100px;
+  width: 288px;
+  height: 56px;
+  margin-left: 16px;
+}
+.form-search__input-text{
+  width: 256px;
+  height: 22px;
+  margin: 17px 0 0 16px;
+  border: none;
+  outline: none;
+}
+.form-search__input-btn{
+  position: absolute;
+  width: 168px;
+  height: 64px;
+  background: #2F71E5;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  top: 0px;
+  right: 0px;
+}
+.form-search{
+  margin-top: 24px;
+}
+.form-search__block-btn{
+  height: 80px;
+}
+.form-search__input-btn{
+  position: absolute;
+  width: 288px;
+  height: 56px;
+  background: #2F71E5;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  top: 0px;
+  right: 0px;
+  margin-top: 16px;
+  margin-right: 16px;
+}
+
+}
