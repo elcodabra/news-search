@@ -418,7 +418,7 @@ color: #1A1B22;
   margin-bottom: 28px;
   position: absolute;
   bottom: 133px;
-  left: 240px;
+  left: 235px;
 
 }
 .footer__list {
@@ -437,7 +437,7 @@ color: #1A1B22;
   line-height: 22px;
   color: #B6BCBF;
   margin: 15px 0px 20px 16px;
-  width: 100%;
+  width: max-content;
 }
 .footer__social-link-item:nth-child(2) {
   background-image: url(icon/icon-social-facebook.png);
