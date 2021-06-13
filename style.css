@@ -140,7 +140,95 @@
 .form-search{
   margin-top: 64px;
 }
-
+.block-about-author{
+  display: flex;
+}
+.block-about-author__img-author{
+  background-image: url(img/photo-author.png);
+  width: 464px;
+  height: 464px;
+  margin: 80px 56px 80px 104px ;
+}
+.block-about-autor__title{
+  margin-top: 131px;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+}
+.block-about-autor__discription{
+  margin-top: 24px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  padding-right: 216px;
+}
+.footer__copyright{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+  margin: 33px 0px 25px 104px;
+  width: 25%;
+}
+.footer{
+  display: flex;
+  align-items: center;
+}
+.footer__list{
+  display: flex;
+  margin: 30px 0 28px 290px ;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+}
+.footer__list-item{
+  list-style-type: none;
+}
+.footer__link-item{
+  text-decoration: none;
+  font-family: Source Sans Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+text-align: center;
+color: #1A1B22;
+}
+.footer__list-item:nth-child(2){
+  margin-left: 48px;
+}
+.footer__list-item:nth-child(3){
+  margin-left: 48px;
+}
+.footer__social-link-item:first-child{
+ background-image: url(icon/icon-github.png);
+ height: 22px;
+ width: 22px;
+ display: block;
+ background-repeat: no-repeat;
+}
+.footer__social-link-item:nth-child(2){
+  background-image: url(icon/icon-social-facebook.png);
+  height: 22px;
+  width: 22px;
+  display: block;
+  background-repeat: no-repeat;
+  margin-left: 27.89px;
+  margin-right: 106px;
+ }
+ .footer__social-links{
+   display: flex;
+   margin-top: 30px;
+   margin-left: 321.89px;
+   margin-bottom: 28px;
+   width: 25%;
+ }
 
 
 
@@ -285,6 +373,94 @@
   right: 0px;
   margin-top: 16px;
   margin-right: 16px;
+  margin-left: 16px;
+}
+.block-about-author__img-author{
+  background-image: url(img/photo-author-mobile.png);
+  width: 272px;
+  height: 272px;
+  margin: 20px 24px 24px 24px ;
+  background-repeat: no-repeat;
+}
+.block-about-author{
+  display: block;
+}
+.block-about-autor__title{
+  margin-top: 0px;
+  padding-right: 16px;
+  padding-left: 16px;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 40px;
+}
+.block-about-autor__discription{
+  margin-top: 16px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+.footer__mobile{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column-reverse;
+  position: relative;
+}
+.footer__social-links{
+  display: flex;
+  margin-top: 30px;
+  margin-left: 0px;
+  margin-bottom: 28px;
+  position: absolute;
+  bottom: 133px;
+  left: 240px;
+
+}
+.footer__list {
+  display: flex;
+  margin: 30px 0px 0px 0px;
+  align-items: flex-start;
+  text-align: center;
+  flex-direction: column;
+  margin-left: 16px;
+}
+.footer__copyright {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+  margin: 15px 0px 20px 16px;
+  width: 100%;
+}
+.footer__social-link-item:nth-child(2) {
+  background-image: url(icon/icon-social-facebook.png);
+  height: 22px;
+  width: 22px;
+  display: block;
+  background-repeat: no-repeat;
+  margin-left: 27.89px;
+  margin-right: 0px;
+}
+.footer__list-item:nth-child(2){
+  margin-left: 0px;
+}
+.footer__list-item:nth-child(3){
+  margin-left: 0px;
+}
+.footer__link-item {
+  font-family: Source Sans Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 48px;
+color: #1A1B22;
 }
 
 }
