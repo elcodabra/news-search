@@ -1504,6 +1504,8 @@
     text-align: center;
     flex-direction: row;
     margin-left: 16px;
+    position: relative;
+    right: -170px;
   }
 
   .footer__copyright {
@@ -1585,6 +1587,23 @@
     border-radius: 100%;
     background-size: contain;
   }
+  .footer__link-item {
+    text-decoration: none;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #1A1B22;
+    margin-left: 27px;
+}
+.footer__list-item:nth-child(2) {
+  margin-left: 0px;
+}
+.footer__list-item:nth-child(3) {
+  margin-left: 0px;
+}
 
 }
 
