@@ -1596,13 +1596,51 @@
     line-height: 24px;
     text-align: center;
     color: #1A1B22;
-    margin-left: 27px;
+}
+.footer__link-item {
+  text-decoration: none;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #1A1B22;
+  display: block;
+  width: 105px;
 }
 .footer__list-item:nth-child(2) {
   margin-left: 0px;
 }
 .footer__list-item:nth-child(3) {
   margin-left: 0px;
+}
+.footer__social-links {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 0px;
+  margin-bottom: 28px;
+  width: 25%;
+  justify-content: flex-end;
+}
+.footer__list {
+  display: flex;
+  margin: 0px 0 0px 0px;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.footer__copyright {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+  margin: 0px 0px 0px 0px;
+  width: 25%;
+  text-align: center;
 }
 
 }
