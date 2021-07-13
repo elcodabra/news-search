@@ -2,6 +2,10 @@
   background-image: url(img/georgia-de-lotz-bg.png);
   background-repeat: no-repeat;
 }
+.container{
+  width: 1440px;
+  margin: 0 auto;
+}
 
 .header__bg-img {
   height: 576px;
@@ -117,11 +121,7 @@
   border: none;
   outline: none;
 }
-.form-search__block-btn{
-  position: relative;
-}
 .form-search__input-btn{
-  position: absolute;
   width: 168px;
   height: 64px;
   background: #2F71E5;
@@ -134,11 +134,12 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  top: -64px;
-  right: 324px;
+  /* position: relative;
+  left: -168px; */
 }
 .form-search{
   margin-top: 64px;
+  display: flex;
 }
 .block-about-author{
   display: flex;
@@ -232,7 +233,7 @@ color: #1A1B22;
 
 
 
-@media (max-width: 767px) {
+@media (max-width: 320px) {
   .header {
     background-image: url(img/georgia-de-lotz-mobile.png);
     background-repeat: no-repeat;
@@ -323,7 +324,6 @@ color: #1A1B22;
   border-radius: 100px;
   width: 288px;
   height: 56px;
-  margin-left: 16px;
 }
 .form-search__input-text{
   width: 256px;
@@ -333,7 +333,6 @@ color: #1A1B22;
   outline: none;
 }
 .form-search__input-btn{
-  position: absolute;
   width: 168px;
   height: 64px;
   background: #2F71E5;
@@ -346,17 +345,18 @@ color: #1A1B22;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  top: 0px;
-  right: 0px;
+  margin-top: 15px;
 }
 .form-search{
   margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .form-search__block-btn{
   height: 80px;
 }
 .form-search__input-btn{
-  position: absolute;
   width: 288px;
   height: 56px;
   background: #2F71E5;
@@ -369,11 +369,6 @@ color: #1A1B22;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  top: 0px;
-  right: 0px;
-  margin-top: 16px;
-  margin-right: 16px;
-  margin-left: 16px;
 }
 .block-about-author__img-author{
   background-image: url(img/photo-author-mobile.png);
@@ -418,8 +413,7 @@ color: #1A1B22;
   margin-bottom: 28px;
   position: absolute;
   bottom: 133px;
-  left: 235px;
-
+  left: 240px;
 }
 .footer__list {
   display: flex;
@@ -461,6 +455,252 @@ font-weight: normal;
 font-size: 18px;
 line-height: 48px;
 color: #1A1B22;
+}
+
+}
+
+@media only screen and (min-device-width : 321px) and (max-device-width : 375px) {
+  .header {
+    background-image: url(img/georgia-de-lotz-mobile.png);
+    background-repeat: no-repeat;
+  }
+  .header__content-inner {
+    margin-left: 0px;
+  }
+  .search-form__content {
+    width: 288px; 
+   display: flex;
+   flex-direction: column;
+}
+.header__bg-img {
+  height: 536px;
+  background-size: cover;
+}
+.search-form__input-item {
+  width: 256px;
+  height: 22px;
+  border: none;
+  outline: none;
+  margin: 17px 0 0 16px;
+}
+.header__logo {
+  width: 40%;
+  margin: 16px 0px 16px 16px;
+}
+.header__logo-link {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+.header__menu {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 14px;
+}
+.header__list-item {
+  list-style-type: none;
+  margin: 16px 0 16px 0;
+}
+.header__link-item {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.header__list-item:nth-child(1) {
+  margin-right: 11px;
+}
+.header__link-item--active::after {
+  position: relative;
+  content: "";
+  width: 100%;
+  background-color: #fff;
+  height: 3px;
+  display: block;
+  top: 16px;
+}
+.header__content-title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: #FFFFFF;
+  margin-top: 0px;
+  padding-top: 30px;
+  margin-left: 19px;
+}
+.header__content-description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+  margin: 56px 16px 0 16px;
+}
+.form-search__block-input{
+  background: #FFFFFF;
+  border: 1px solid #D1D2D6;
+  box-sizing: border-box;
+  border-radius: 100px;
+  width: 288px;
+  height: 56px;
+}
+.form-search__input-text{
+  width: 256px;
+  height: 22px;
+  margin: 17px 0 0 16px;
+  border: none;
+  outline: none;
+}
+.form-search__input-btn{
+  width: 168px;
+  height: 64px;
+  background: #2F71E5;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 15px;
+}
+.form-search{
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-search__block-btn{
+  height: 80px;
+}
+.form-search__input-btn{
+  width: 288px;
+  height: 56px;
+  background: #2F71E5;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+.block-about-author__img-author{
+  background-image: url(img/photo-author-mobile.png);
+  width: 272px;
+  height: 272px;
+  margin: 20px 24px 24px 24px ;
+  background-repeat: no-repeat;
+}
+.block-about-author{
+  display: block;
+}
+.block-about-autor__title{
+  margin-top: 0px;
+  padding-right: 16px;
+  padding-left: 16px;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 40px;
+}
+.block-about-autor__discription{
+  margin-top: 16px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+.footer__mobile{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column-reverse;
+  position: relative;
+}
+.footer__social-links{
+  display: flex;
+  margin-top: 30px;
+  margin-left: 0px;
+  margin-bottom: 28px;
+  position: absolute;
+  bottom: 133px;
+  left: 280px;
+}
+.footer__list {
+  display: flex;
+  margin: 30px 0px 0px 0px;
+  align-items: flex-start;
+  text-align: center;
+  flex-direction: column;
+  margin-left: 16px;
+}
+.footer__copyright {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+  margin: 15px 0px 20px 16px;
+  width: max-content;
+}
+.footer__social-link-item:nth-child(2) {
+  background-image: url(icon/icon-social-facebook.png);
+  height: 22px;
+  width: 22px;
+  display: block;
+  background-repeat: no-repeat;
+  margin-left: 27.89px;
+  margin-right: 0px;
+}
+.footer__list-item:nth-child(2){
+  margin-left: 0px;
+}
+.footer__list-item:nth-child(3){
+  margin-left: 0px;
+}
+.footer__link-item {
+  font-family: Source Sans Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 48px;
+color: #1A1B22;
+}
+.block-about-author__left-part{
+  display: flex;
+  justify-content: center;
+}
+  }
+
+@media (min-width: 1440px) {
+  .header {
+    background-image: url(img/georgia-de-lotz-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .header__content-inner {
+    margin-left: 554px;
+}
+.form-search__input-btn{
+  position: relative;
+  right: 168px;
 }
 
 }
