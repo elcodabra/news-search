@@ -768,6 +768,7 @@
     display: flex;
     justify-content: center;
   }
+
   .footer__social-link-item:first-child {
     background-image: url(icon/icon-github.png);
     height: 22px;
@@ -777,6 +778,7 @@
     margin-left: 14px;
   }
 }
+
 @media only screen and (min-device-width : 376px) and (max-device-width : 425px) {
   .header {
     background-image: url(img/georgia-de-lotz-mobile.png);
@@ -892,6 +894,7 @@
     border: none;
     outline: none;
   }
+
   .form-search {
     margin-top: 24px;
     display: flex;
@@ -1023,6 +1026,7 @@
     display: flex;
     justify-content: center;
   }
+
   .footer__social-link-item:first-child {
     background-image: url(icon/icon-github.png);
     height: 22px;
@@ -1032,6 +1036,7 @@
     margin-left: 25px;
   }
 }
+
 @media only screen and (min-device-width : 426px) and (max-device-width : 768px) {
   .header {
     background-image: url(img/georgia-de-lotz-bg.png);
@@ -1150,6 +1155,7 @@
     border: none;
     outline: none;
   }
+
   .form-search {
     margin-top: 15px;
     display: flex;
@@ -1281,6 +1287,7 @@
     display: flex;
     justify-content: center;
   }
+
   .footer__social-link-item:first-child {
     background-image: url(icon/icon-github.png);
     height: 22px;
@@ -1291,6 +1298,7 @@
   }
 
 }
+
 @media only screen and (min-device-width : 769px) and (max-device-width : 1024px) {
   .header {
     background-image: url(img/georgia-de-lotz-bg.png);
@@ -1378,8 +1386,8 @@
     max-width: 608px;
     margin-top: 0px;
     padding-top: 80px;
-    margin-left: 350px;
-}
+    margin-left: 330px;
+  }
 
   .header__content-description {
     font-family: Roboto;
@@ -1388,7 +1396,7 @@
     font-size: 20px;
     line-height: 26px;
     color: #FFFFFF;
-    margin: 16px 16px 0 350px;
+    margin: 16px 16px 0 330px;
     padding-right: 100px;
   }
 
@@ -1399,7 +1407,7 @@
     border-radius: 100px;
     width: 540px;
     height: 56px;
-    margin-left: 350px;
+    margin-left: 330px;
   }
 
   .form-search__input-text {
@@ -1409,6 +1417,7 @@
     border: none;
     outline: none;
   }
+
   .form-search {
     margin-top: 15px;
     display: flex;
@@ -1422,7 +1431,7 @@
 
   .form-search__input-btn {
     width: 160px;
-    height: 56px;
+    height: 57px;
     background: #2F71E5;
     border-radius: 100px;
     border: none;
@@ -1433,7 +1442,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
-    margin-top: 12px;
+    margin-top: 11px;
     margin-left: -159px;
   }
 
@@ -1540,6 +1549,7 @@
     display: flex;
     justify-content: center;
   }
+
   .footer__social-link-item:first-child {
     background-image: url(icon/icon-github.png);
     height: 22px;
@@ -1550,6 +1560,34 @@
   }
 }
 
+@media only screen and (min-device-width : 1025px) and (max-device-width : 1440px) {
+
+  .header {
+    background-image: url(img/georgia-de-lotz-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .header__content-inner {
+    margin-left: 416px;
+  }
+
+  .form-search__input-btn {
+    position: relative;
+    right: 168px;
+  }
+
+  .block-about-author__img-author {
+    background-image: url(img/Mykhailetskyi.jpg);
+    width: 464px;
+    height: 464px;
+    margin: 80px 56px 80px 104px;
+    border-radius: 100%;
+    background-size: contain;
+  }
+
+}
+
 @media (min-width: 1441px) {
   .header {
     background-image: url(img/georgia-de-lotz-bg.png);
@@ -1558,20 +1596,21 @@
   }
 
   .header__content-inner {
-    margin-left: 685px;
+    margin-left: 555px;
   }
 
   .form-search__input-btn {
     position: relative;
     right: 168px;
   }
+
   .block-about-author__img-author {
     background-image: url(img/Mykhailetskyi.jpg);
     width: 464px;
     height: 464px;
-    margin: 80px 56px 80px 330px;
+    margin: 80px 56px 80px 285px;
     border-radius: 100%;
     background-size: contain;
-}
+  }
 
 }
