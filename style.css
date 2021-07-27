@@ -1657,11 +1657,11 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 24px;
     color: #FFFFFF;
     margin: 16px 16px 0 160px;
-    padding-right: 100px;
+    padding-right: 127px;
   }
 
   .form-search__block-input {
