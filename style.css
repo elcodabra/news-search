@@ -454,7 +454,9 @@
     margin-bottom: 28px;
     position: absolute;
     bottom: 133px;
-    left: 240px;
+    right: 0;
+    margin-right: 16px;
+    width: fit-content;
   }
 
   .footer__list {
@@ -714,7 +716,9 @@
     margin-bottom: 28px;
     position: absolute;
     bottom: 133px;
-    left: 240px;
+    right: 0;
+    margin-right: 16px;
+    width: fit-content;
   }
 
   .footer__list {
@@ -778,8 +782,7 @@
     margin-left: 14px;
   }
 }
-
-@media only screen and (min-device-width : 376px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 376px) and (max-device-width : 409px) {
   .header {
     background-image: url(img/georgia-de-lotz-mobile.png);
     background-repeat: no-repeat;
@@ -972,7 +975,9 @@
     margin-bottom: 28px;
     position: absolute;
     bottom: 133px;
-    left: 275px;
+    right: 0;
+    margin-right: 16px;
+    width: fit-content;
   }
 
   .footer__list {
@@ -1036,9 +1041,9 @@
     margin-left: 25px;
   }
 }
-@media only screen and (min-device-width : 426px) and (max-device-width : 615px) {
+@media only screen and (min-device-width : 410px) and (max-device-width : 520px) {
   .header {
-    background-image: url(img/georgia-de-lotz-bg.png);
+    background-image: url(img/georgia-de-lotz-mobile.png);
     background-repeat: no-repeat;
   }
 
@@ -1053,7 +1058,7 @@
   }
 
   .header__bg-img {
-    height: 400px;
+    height: 450px;
     background-size: cover;
   }
 
@@ -1067,7 +1072,7 @@
 
   .header__logo {
     width: 40%;
-    margin: 16px 0px 16px 40px;
+    margin: 16px 0px 16px 16px;
   }
 
   .header__logo-link {
@@ -1083,12 +1088,12 @@
     width: 60%;
     display: flex;
     justify-content: flex-end;
-    margin-right: 0px;
+    margin-right: 14px;
   }
 
   .header__list-item {
     list-style-type: none;
-    margin: 16px 42px 16px 34px;
+    margin: 16px 0 16px 0;
   }
 
   .header__link-item {
@@ -1122,8 +1127,7 @@
     color: #FFFFFF;
     margin-top: 0px;
     padding-top: 30px;
-    margin-left: 163px;
-    padding-right: 210px;
+    margin-left: 10px;
   }
 
   .header__content-description {
@@ -1133,8 +1137,7 @@
     font-size: 20px;
     line-height: 26px;
     color: #FFFFFF;
-    margin: 16px 16px 0 160px;
-    padding-right: 100px;
+    margin: 56px 16px 0 16px;
   }
 
   .form-search__block-input {
@@ -1142,9 +1145,8 @@
     border: 1px solid #D1D2D6;
     box-sizing: border-box;
     border-radius: 100px;
-    width: 448px;
+    width: 340px;
     height: 56px;
-    margin-left: 160px;
   }
 
   .form-search__input-text {
@@ -1156,9 +1158,9 @@
   }
 
   .form-search {
-    margin-top: 15px;
+    margin-top: 24px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
   }
 
@@ -1167,7 +1169,7 @@
   }
 
   .form-search__input-btn {
-    width: 160px;
+    width: 340px;
     height: 56px;
     background: #2F71E5;
     border-radius: 100px;
@@ -1179,26 +1181,25 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
-    margin-top: 12px;
-    margin-left: -159px;
+    margin-top: 20px;
   }
 
   .block-about-author__img-author {
     background-image: url(img/Mykhailetskyi.jpg);
-    width: 232px;
-    height: 232px;
-    margin: 40px 24px 0px 40px;
+    width: 272px;
+    height: 272px;
+    margin: 20px 24px 24px 24px;
     background-repeat: no-repeat;
     border-radius: 100%;
     background-size: contain;
   }
 
   .block-about-author {
-    display: flex;
+    display: block;
   }
 
   .block-about-autor__title {
-    margin-top: 42px;
+    margin-top: 0px;
     padding-right: 16px;
     padding-left: 16px;
     font-family: Roboto Slab;
@@ -1222,24 +1223,28 @@
   .footer__mobile {
     display: flex;
     align-items: flex-start;
+    flex-direction: column-reverse;
     position: relative;
-    justify-content: center;
-    margin-top: 15px;
   }
 
   .footer__social-links {
     display: flex;
-    margin-top: 12px;
+    margin-top: 30px;
     margin-left: 0px;
     margin-bottom: 28px;
+    position: absolute;
+    bottom: 133px;
+    right: 0;
+    margin-right: 16px;
+    width: fit-content;
   }
 
   .footer__list {
     display: flex;
-    margin: 0px 0px 0px 0px;
+    margin: 30px 0px 0px 0px;
     align-items: flex-start;
     text-align: center;
-    flex-direction: row;
+    flex-direction: column;
     margin-left: 16px;
   }
 
@@ -1279,7 +1284,6 @@
     font-size: 18px;
     line-height: 48px;
     color: #1A1B22;
-    margin-left: 25.12px;
   }
 
   .block-about-author__left-part {
@@ -1293,10 +1297,271 @@
     width: 22px;
     display: block;
     background-repeat: no-repeat;
-    margin-left: 120px;
+    margin-left: 25px;
   }
 
 }
+@media only screen and (min-device-width : 521px) and (max-device-width : 614px) {
+  .header {
+    background-image: url(img/georgia-de-lotz-mobile.png);
+    background-repeat: no-repeat;
+  }
+
+  .header__content-inner {
+    margin-left: 0px;
+  }
+
+  .search-form__content {
+    width: 288px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__bg-img {
+    height: 450px;
+    background-size: cover;
+  }
+
+  .search-form__input-item {
+    width: 256px;
+    height: 22px;
+    border: none;
+    outline: none;
+    margin: 17px 0 0 16px;
+  }
+
+  .header__logo {
+    width: 40%;
+    margin: 16px 0px 16px 16px;
+  }
+
+  .header__logo-link {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+  }
+
+  .header__menu {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 14px;
+  }
+
+  .header__list-item {
+    list-style-type: none;
+    margin: 16px 0 16px 0;
+  }
+
+  .header__link-item {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .header__list-item:nth-child(1) {
+    margin-right: 11px;
+  }
+
+  .header__link-item--active::after {
+    position: relative;
+    content: "";
+    width: 100%;
+    background-color: #fff;
+    height: 3px;
+    display: block;
+    top: 16px;
+  }
+
+  .header__content-title {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 40px;
+    color: #FFFFFF;
+    margin-top: 0px;
+    padding-top: 30px;
+    margin-left: 10px;
+  }
+
+  .header__content-description {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin: 56px 16px 0 16px;
+  }
+
+  .form-search__block-input {
+    background: #FFFFFF;
+    border: 1px solid #D1D2D6;
+    box-sizing: border-box;
+    border-radius: 100px;
+    width: 450px;
+    height: 56px;
+  }
+
+  .form-search__input-text {
+    width: 256px;
+    height: 22px;
+    margin: 17px 0 0 16px;
+    border: none;
+    outline: none;
+  }
+
+  .form-search {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-search__block-btn {
+    height: 80px;
+  }
+
+  .form-search__input-btn {
+    width: 450px;
+    height: 56px;
+    background: #2F71E5;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 20px;
+  }
+
+  .block-about-author__img-author {
+    background-image: url(img/Mykhailetskyi.jpg);
+    width: 272px;
+    height: 272px;
+    margin: 20px 24px 24px 24px;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    background-size: contain;
+  }
+
+  .block-about-author {
+    display: block;
+  }
+
+  .block-about-autor__title {
+    margin-top: 0px;
+    padding-right: 16px;
+    padding-left: 16px;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .block-about-autor__discription {
+    margin-top: 16px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .footer__mobile {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .footer__social-links {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-bottom: 28px;
+    position: absolute;
+    bottom: 133px;
+    right: 0;
+    margin-right: 16px;
+    width: fit-content;
+  }
+
+  .footer__list {
+    display: flex;
+    margin: 30px 0px 0px 0px;
+    align-items: flex-start;
+    text-align: center;
+    flex-direction: column;
+    margin-left: 16px;
+  }
+
+  .footer__copyright {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #B6BCBF;
+    margin: 15px 0px 20px 16px;
+    width: max-content;
+  }
+
+  .footer__social-link-item:nth-child(2) {
+    background-image: url(icon/icon-social-facebook.png);
+    height: 22px;
+    width: 22px;
+    display: block;
+    background-repeat: no-repeat;
+    margin-left: 27.89px;
+    margin-right: 0px;
+  }
+
+  .footer__list-item:nth-child(2) {
+    margin-left: 0px;
+  }
+
+  .footer__list-item:nth-child(3) {
+    margin-left: 0px;
+  }
+
+  .footer__link-item {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 48px;
+    color: #1A1B22;
+  }
+
+  .block-about-author__left-part {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer__social-link-item:first-child {
+    background-image: url(icon/icon-github.png);
+    height: 22px;
+    width: 22px;
+    display: block;
+    background-repeat: no-repeat;
+    margin-left: 25px;
+  }
+
+}
+
 
 @media only screen and (min-device-width : 615px) and (max-device-width : 768px) {
   .header {
@@ -1494,6 +1759,7 @@
     margin-top: 12px;
     margin-left: 0px;
     margin-bottom: 28px;
+    justify-content: flex-end;
   }
 
   .footer__list {
@@ -1523,7 +1789,7 @@
     display: block;
     background-repeat: no-repeat;
     margin-left: 27.89px;
-    margin-right: 0px;
+    margin-right: 10px;
   }
 
   .footer__list-item:nth-child(2) {
@@ -1555,7 +1821,7 @@
     width: 22px;
     display: block;
     background-repeat: no-repeat;
-    margin-left: 120px;
+    margin-left: 0px;
   }
 
 }
@@ -1766,7 +2032,7 @@
     flex-direction: row;
     margin-left: 16px;
     position: relative;
-    right: -170px;
+    right: -65px;
   }
 
   .footer__copyright {
@@ -1819,7 +2085,7 @@
     width: 22px;
     display: block;
     background-repeat: no-repeat;
-    margin-left: 185px;
+    margin-left: 100px;
   }
 }
 
