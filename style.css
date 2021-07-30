@@ -2117,7 +2117,7 @@
 }
 
 
-@media only screen and (min-device-width : 615px) and (max-device-width : 768px) {
+@media only screen and (min-device-width : 615px) and (max-device-width : 767px) {
   .header {
     background-image: url(img/georgia-de-lotz-bg.png);
     background-repeat: no-repeat;
@@ -2480,7 +2480,7 @@
 
 }
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1023px) {
   .header {
     background-image: url(img/georgia-de-lotz-bg.png);
     background-repeat: no-repeat;
@@ -2751,7 +2751,7 @@
     margin-left: 100px;
   }
   .block-search__title {
-    margin: 0px 0px ;
+    margin: 40px 0 32px 40px;
     /* padding:32px 16px 16.26px 40px; */
     font-family: Roboto Slab;
     font-style: normal;
@@ -2810,7 +2810,7 @@
     -webkit-box-orient: vertical;
 }
 .block-search__more-info {
-  margin: 38px 10px 34px 20px;
+  margin: 48px 10px 34px 20px;
 }
 .block-search__discription {
   font-family: Roboto;
@@ -2851,7 +2851,6 @@
   white-space: nowrap;
 }
 }
-
 @media only screen and (min-device-width : 1024px) and (max-device-width : 1440px) {
 
   .header {
@@ -2866,7 +2865,7 @@
 
   .form-search__input-btn {
     position: relative;
-    right: 0px;
+    right: 167px;
   }
 
   .block-about-author__img-author {
@@ -2901,6 +2900,15 @@
     display: block;
     width: 105px;
   }
+  .footer__social-link-item:nth-child(2) {
+    background-image: url(icon/icon-social-facebook.png);
+    height: 22px;
+    width: 22px;
+    display: block;
+    background-repeat: no-repeat;
+    margin-left: 27.89px;
+    margin-right: 0px;
+}
 
   .footer__list-item:nth-child(2) {
     margin-left: 0px;
@@ -2966,19 +2974,18 @@
     color: #1A1B22;
   }
   .block-search__item {
-    margin: 0px 8px;
+    margin: 8px 8px;
     background-color: #fff;
     border-radius: 15px 15px 15px 15px;
     height: 420px;
     position: relative;
-    max-width: 300px;
-    height: 470px;
-    width: 300px;
+    height: 576px;
+    width: 400px;
   }
   .block-search__img {
     border-radius: 15px 15px 0px 0px;
-    height: 200px;
-    width: 300px;
+    height: 272px;
+    width: 400px;
   }
   .block-search-items {
     display: flex;
@@ -3045,7 +3052,7 @@
 
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .header {
     background-image: url(img/georgia-de-lotz-bg.png);
     background-repeat: no-repeat;
