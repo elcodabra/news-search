@@ -754,7 +754,7 @@
 }
 }
 
-@media only screen and (min-device-width : 321px) and (max-device-width : 375px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 375px) {
   .header {
     background-image: url(img/georgia-de-lotz-mobile.png);
     background-repeat: no-repeat;
@@ -1111,7 +1111,7 @@
 }
 }
 
-@media only screen and (min-device-width : 376px) and (max-device-width : 409px) {
+@media only screen and (min-device-width : 375px) and (max-device-width : 410px) {
   .header {
     background-image: url(img/georgia-de-lotz-mobile.png);
     background-repeat: no-repeat;
@@ -1756,7 +1756,7 @@
 
 }
 
-@media only screen and (min-device-width : 521px) and (max-device-width : 614px) {
+@media only screen and (min-device-width : 520px) and (max-device-width : 615px) {
   .header {
     background-image: url(img/georgia-de-lotz-mobile.png);
     background-repeat: no-repeat;
@@ -2116,7 +2116,7 @@
 }
 
 
-@media only screen and (min-device-width : 615px) and (max-device-width : 767px) {
+@media only screen and (min-device-width : 615px) and (max-device-width : 768px) {
   .header {
     background-image: url(img/georgia-de-lotz-bg.png);
     background-repeat: no-repeat;
@@ -2378,7 +2378,7 @@
   }
   .block-search__title {
     margin: 0px 0px ;
-    padding:32px 16px 16.26px 16px;
+    padding:32px 16px 16.26px 40px;
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: normal;
@@ -2742,7 +2742,7 @@
   }
   .block-search__title {
     margin: 0px 0px ;
-    padding:32px 16px 16.26px 16px;
+    padding:32px 16px 16.26px 40px;
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: normal;
@@ -2842,7 +2842,7 @@
 }
 }
 
-@media only screen and (min-device-width : 1025px) and (max-device-width : 1440px) {
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1440px) {
 
   .header {
     background-image: url(img/georgia-de-lotz-bg.png);
@@ -2929,13 +2929,9 @@
     width: 25%;
     text-align: center;
   }
-  .block-search__item {
-    border-radius: 15px 15px 15px 15px;
-    height: auto;
-  }
   .block-search__title {
     margin: 0px 0px ;
-    padding:32px 16px 16.26px 16px;
+    padding:32px 16px 16.26px 47px;
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: normal;
@@ -2965,12 +2961,14 @@
     border-radius: 15px 15px 0px 0px;
     height: 420px;
     position: relative;
-    width: 224px;
+    max-width: 300px;
+    height: 470px;
+    width: 300px;
   }
   .block-search__img {
     border-radius: 15px 15px 0px 0px;
-    width: 224px;
-    height: 150px;
+    height: 200px;
+    width: 300px;
   }
   .block-search-items {
     display: flex;
@@ -2993,7 +2991,7 @@
     -webkit-box-orient: vertical;
 }
 .block-search__more-info {
-  margin: 38px 10px 34px 20px;
+  margin: 38px 15px 34px 20px;
 }
 .block-search__discription {
   font-family: Roboto;
@@ -3012,10 +3010,11 @@
 .block-search__button {
   margin: 50px 0 60px 0;
 }
-.block-search__item {
+/* .block-search__item {
   border-radius: 15px 15px 15px 15px;
   height: auto;
-}
+  position: relative;
+} */
 .block-search__date-added {
   margin: 16px 0 0 16px;
   width: 195px;
@@ -3024,9 +3023,9 @@
   white-space: nowrap;
 }
 .block-search__source-of-text {
+  position: absolute;
+  bottom: 0px;
   margin: 15px 24px 15px 17px;
-  width: fit-content;
-  height: 20px;
   width: 192px;
   height: 20px;
   overflow: hidden;
@@ -3036,7 +3035,7 @@
 
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1440px) {
   .header {
     background-image: url(img/georgia-de-lotz-bg.png);
     background-repeat: no-repeat;
@@ -3083,7 +3082,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
-    margin: 94px 90px;
+    margin:115px 90px;
     background-image: url(img/arrow-search.png);
     background-repeat: no-repeat;
     background-position: 220px 6px;
