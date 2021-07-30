@@ -277,7 +277,7 @@
 }
 .block-search-items{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 0 100px 0 100px;
 }
@@ -2949,7 +2949,7 @@
     text-align: center;
   }
   .block-search__title {
-    margin: 80px 0 67px 0;
+    margin: 80px 0 67px 106px;
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: normal;
@@ -2959,7 +2959,7 @@
   }
   .block-search__more-info{
     display: block;
-    width: 214px;
+    width: 250px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -2974,7 +2974,7 @@
     color: #1A1B22;
   }
   .block-search__item {
-    /* margin: 8px 8px; */
+    margin: 8px 8px;
     background-color: #fff;
     border-radius: 15px 15px 15px 15px;
     height: 420px;
@@ -2989,7 +2989,7 @@
   }
   .block-search-items {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 0 0 0 0;
   }
@@ -3008,7 +3008,7 @@
     -webkit-box-orient: vertical;
 }
 .block-search__more-info {
-  margin: 84px 0 72px 20px;
+  margin: 84px 80px 72px 20px;
 }
 .block-search__discription {
   font-family: Roboto;
@@ -3052,7 +3052,6 @@
 }
 .block-search {
   background: #F5F6F7;
-  padding: 0 104px;
 }
 
 }
