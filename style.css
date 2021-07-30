@@ -186,6 +186,7 @@
 .footer {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .footer__list {
@@ -2668,6 +2669,7 @@
     position: relative;
     justify-content: center;
     margin-top: 20px;
+    padding-bottom: 20px;
   }
 
   .footer__social-links {
@@ -2675,6 +2677,9 @@
     margin-top: 12px;
     margin-left: 0px;
     margin-bottom: 28px;
+    position: absolute;
+    right: 0;
+    margin-right: 16px;
   }
 
   .footer__list {
@@ -2685,7 +2690,7 @@
     flex-direction: row;
     margin-left: 16px;
     position: relative;
-    right: -65px;
+    right: -10px;
   }
 
   .footer__copyright {
@@ -2697,6 +2702,11 @@
     color: #B6BCBF;
     margin: 15px 0px 20px 16px;
     width: max-content;
+    position: absolute;
+    bottom: 133px;
+    bottom: 12px;
+    left: 0;
+    margin-left: 45px;
   }
 
   .footer__social-link-item:nth-child(2) {
@@ -2742,7 +2752,7 @@
   }
   .block-search__title {
     margin: 0px 0px ;
-    padding:32px 16px 16.26px 40px;
+    /* padding:32px 16px 16.26px 40px; */
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: normal;
@@ -2851,12 +2861,12 @@
   }
 
   .header__content-inner {
-    margin-left: 416px;
+    margin-left: 190px;
   }
 
   .form-search__input-btn {
     position: relative;
-    right: 168px;
+    right: 0px;
   }
 
   .block-about-author__img-author {
@@ -2907,6 +2917,7 @@
     margin-bottom: 28px;
     width: 25%;
     justify-content: flex-end;
+    margin: 0 45px 0 0;
   }
 
   .footer__list {
@@ -2925,13 +2936,12 @@
     font-size: 16px;
     line-height: 22px;
     color: #B6BCBF;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 6px -20px;
     width: 25%;
     text-align: center;
   }
   .block-search__title {
-    margin: 0px 0px ;
-    padding:32px 16px 16.26px 47px;
+    margin: 80px 0 67px 46px;
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: normal;
@@ -2958,7 +2968,7 @@
   .block-search__item {
     margin: 0px 8px;
     background-color: #fff;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 15px 15px;
     height: 420px;
     position: relative;
     max-width: 300px;
@@ -2991,7 +3001,7 @@
     -webkit-box-orient: vertical;
 }
 .block-search__more-info {
-  margin: 38px 15px 34px 20px;
+  margin: 84px 14px 72px 20px;
 }
 .block-search__discription {
   font-family: Roboto;
@@ -3072,7 +3082,7 @@
     font-size: 40px;
     line-height: 46px;
     color: #1A1B22;
-    margin: 80px 106px ;
+    margin: 80px 0px 64px 257px;
   }
   .block-search__more-info{
     height: fit-content;
@@ -3089,6 +3099,7 @@
     cursor: pointer;
     text-decoration: none;
     color: #1A1B22;
+    margin: 99px 236px 55px 20px;
   }
   .block-search-items{
     display: flex;
