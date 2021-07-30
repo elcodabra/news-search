@@ -283,7 +283,6 @@
 }
 .block-search__item{
   max-width: 400px;
-  /* margin: 0px 15px; */
   background-color: #fff;
   border-radius: 15px 15px 0px 0px;
   height: auto;
@@ -291,6 +290,7 @@
 }
 .block-search__img{
   border-radius: 15px 15px 0px 0px;
+  width: 100%;
 }
 .block-search{
   background: #F5F6F7;
@@ -683,7 +683,7 @@
 }
 .block-search__img{
   border-radius: 15px 15px 0px 0px;
-  width: -webkit-fill-available;
+  width: 100%;
   margin-top: 5px;
   border-radius: 7px 7px 0px 0px;
 }
@@ -1065,7 +1065,7 @@
   }
   .block-search__img{
     border-radius: 15px 15px 0px 0px;
-    width: -webkit-fill-available;
+    width: 100%;
     margin-top: 5px;
     border-radius: 7px 7px 0px 0px;
   }
@@ -1407,7 +1407,7 @@
   }
   .block-search__img{
     border-radius: 15px 15px 0px 0px;
-    width: -webkit-fill-available;
+    width: 100%;
     margin-top: 5px;
     border-radius: 7px 7px 0px 0px;
   }
@@ -1729,7 +1729,7 @@
   }
   .block-search__img{
     border-radius: 15px 15px 0px 0px;
-    width: -webkit-fill-available;
+    width: 100%;
     margin-top: 5px;
     border-radius: 7px 7px 0px 0px;
   }
@@ -2061,7 +2061,7 @@
 }
 .block-search__img{
   border-radius: 15px 15px 0px 0px;
-  width: -webkit-fill-available;
+  width: 100%;
   margin-top: 5px;
   border-radius: 7px 7px 0px 0px;
 }
