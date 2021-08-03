@@ -10,9 +10,9 @@ const itemsCount = items.length;
 const itemsWidth = container.clientWidth / slidesToShow;
 const movePosition = slidesToScroll * itemsWidth;
 
-items.forEach((item) => {
-    item.style.minWidth = `${itemsWidth}px`;
-});
+// items.forEach((item) => {
+//     item.style.minWidth = `${itemsWidth}px`;
+// });
 
 btnNext.addEventListener('click', () => {
     const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemsWidth) / itemsWidth ;
