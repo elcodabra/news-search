@@ -170,6 +170,7 @@
   font-size: 18px;
   line-height: 24px;
   padding-right: 216px;
+  margin-bottom: 30px;
 }
 
 .footer__copyright {
@@ -2051,6 +2052,10 @@
   border-radius: 16px;
   text-decoration: none;
 }
+.block-history {
+    background: #F5F6F7;
+    height: 555px;
+}
 
 }
 
@@ -2158,7 +2163,7 @@
     border: 1px solid #D1D2D6;
     box-sizing: border-box;
     border-radius: 100px;
-    width: 450px;
+    width: 350px;
     height: 56px;
   }
 
@@ -2182,7 +2187,7 @@
   }
 
   .form-search__input-btn {
-    width: 450px;
+    width: 350px;
     height: 56px;
     background: #2F71E5;
     border-radius: 100px;
@@ -2438,6 +2443,10 @@
   background: #FFFFFF;
   border-radius: 16px;
   text-decoration: none;
+}
+.block-history {
+  background: #F5F6F7;
+  height: 530px;
 }
 
 }
