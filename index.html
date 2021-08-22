@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mykhailetskyi</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link
@@ -149,7 +150,12 @@
                 <a class="block-history_link" href="#">Открыть в Github</a>
             </div>
             <div class="block-history__slider">
-                <div class="block-history__slider-container">
+                <div class="multiple-items">
+                    <div>your content</div>
+                    <div>your content</div>
+                    <div>your content</div>
+                  </div>
+                <!-- <div class="block-history__slider-container">
                     <button class="block-history__btn-prev"></button>
                     <button class="block-history__btn-next"></button>
                     <div class="block-history__slider-track">
@@ -261,11 +267,11 @@
                             </div>
                         </a>
                     </div>
-                    <!-- <div class="block-history__slider-buttons">
+                     <!-- <div class="block-history__slider-buttons">
                         <button class="block-history__btn-prev"></button>
                         <button class="block-history__btn-next"></button>
                     </div> -->
-                </div>
+                </div>  -->
             </div>
     </main>
     <footer class="footer footer__mobile">
@@ -288,7 +294,16 @@
             <a class="footer__social-link-item" href="https://www.facebook.com/profile.php?id=100006967621155"></a>
         </div>
     </footer>
-    <script src="main.js"></script>
+    
+    <script src="main.js">
+        $('.multiple-items').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   
 </body>
 
 </html>
