@@ -37,3 +37,7 @@ $('.multiple-items').slick({
          
                ]
   });
+
+
+
+   
