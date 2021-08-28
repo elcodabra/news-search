@@ -42,7 +42,7 @@
 //   });
 $(document).ready(function () {
    $('.multiple-items').slick({
-      // centerMode: true,
+      centerMode: true,
       variableWidth: true,
       arrows: true,
       dots: true,
@@ -51,6 +51,7 @@ $(document).ready(function () {
       slidesToScroll: 1,
       // mobileFirst: false,
       // waitForAnimate: false,
+      // infinite: false,
       responsive: [
          {
             breakpoint: 1024,
