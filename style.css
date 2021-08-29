@@ -3654,7 +3654,7 @@
 
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
 
   .header {
     background-image: url(img/georgia-de-lotz-bg.png);
@@ -3663,7 +3663,7 @@
   }
 
   .container {
-    width: 1235px;
+    width: 916px;
     margin: auto;
   }
 
@@ -3921,15 +3921,15 @@
     width: 813px;
   }
 
-}
+} */
 
-@media (min-width: 1278px) {
+/* @media (min-width: 1278px) {
   .search__top-content {
     width: 1220px;
   }
-}
+} */
 
-@media (min-width: 1440px) {
+@media (min-width: 1250px) {
   .header {
     background-image: url(img/georgia-de-lotz-bg.png);
     background-repeat: no-repeat;
