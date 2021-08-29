@@ -2345,7 +2345,7 @@
 
   .history {
     background: #F5F6F7;
-    height: 555px;
+    height: 585px;
   }
 
   .slick-slide {
@@ -3682,6 +3682,18 @@
     margin-left: 0;
   }
 }
+@media (min-width: 1024px) {
+  .history__slider::before {
+    height: 288px;
+    width: 100px;
+  }
+
+  .history__slider::after {
+    height: 288px;
+    width: 100px;
+    top: 140px;
+  }
+}
 
 @media (min-width: 1250px) {
   .header {
@@ -4029,6 +4041,7 @@
   .history__slider::after {
     height: 288px;
     width: 100px;
+    top: 182px;
   }
 
   .slick-dots li button:before {
