@@ -7,7 +7,7 @@ $(document).ready(function () {
       slidesToScroll: 3,
       mobileFirst: false,
       waitForAnimate: false,
-      infinite: true,
+      infinite: false,
       responsive: [{
             breakpoint: 1024,
             settings: {
@@ -15,7 +15,7 @@ $(document).ready(function () {
                centerPadding: '20px',
                slidesToShow: 3,
                slidesToScroll: 3,
-               infinite: true,
+               infinite: false,
             }
          },
          {

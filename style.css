@@ -3677,15 +3677,11 @@
 
 }
 
-@media (min-width: 769px) {
-  .history__slider {
-    margin-left: 0;
-  }
-}
 @media (min-width: 1024px) {
   .history__slider::before {
     height: 288px;
     width: 100px;
+    left: 0;
   }
 
   .history__slider::after {
@@ -3701,6 +3697,10 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 576px;
+  }
+
+  .history__slider {
+    margin-left: 40;
   }
 
   .container {
@@ -4036,6 +4036,7 @@
   .history__slider::before {
     height: 288px;
     width: 100px;
+    left: 0;
   }
 
   .history__slider::after {
