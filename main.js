@@ -42,24 +42,25 @@
 //   });
 $(document).ready(function () {
    $('.multiple-items').slick({
-      centerMode: true,
+      // centerMode: true,
       variableWidth: true,
       arrows: true,
       dots: true,
       // centerPadding: '30px',
       slidesToShow: 3,
-      slidesToScroll: 1,
-      // mobileFirst: false,
-      // waitForAnimate: false,
+      slidesToScroll: 3,
+      mobileFirst: false,
+      waitForAnimate: false,
       // infinite: false,
       responsive: [
          {
             breakpoint: 1024,
             settings: {
                arrows: false,
-               // centerMode: true,
-               // centerPadding: '20px',
+               centerMode: true,
+               centerPadding: '20px',
                slidesToShow: 3,
+               slidesToScroll: 3,
             }
          },
          {
@@ -69,7 +70,7 @@ $(document).ready(function () {
                centerMode: true,
                centerPadding: '10px',
                slidesToShow: 3,
-               slidesToScroll: 3,
+               slidesToScroll: 1,
             }
          },
          {
@@ -78,7 +79,8 @@ $(document).ready(function () {
                arrows: false,
                centerMode: true,
                centerPadding: '0px',
-               slidesToShow: 1
+               slidesToShow: 1,
+               slidesToScroll: 1,
             }
          }
 
