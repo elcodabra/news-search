@@ -81,8 +81,7 @@
     line-height: 24px;
     color: var(--text-white-color);
     width: 570px;
-    padding: 32px 0 64px ;
-    
+    padding: 32px 0 64px;
 }
 
 .search{
@@ -90,20 +89,20 @@
 }
 
 .input{
- background: #FFFFFF;
- border: 1px solid #D1D2D6;
- backdrop-filter: blur(8px);
- border-radius: 100px;
- width: 608px;
- height: 64px;
- outline: none;
- border: none;
- padding: 0 188px 0 24px;
- font-family: 'Roboto';
- font-style: normal;
- font-weight: 400;
- font-size: 16px;
- line-height: 22px;
+    background: #FFFFFF;
+    border: 1px solid #D1D2D6;
+    backdrop-filter: blur(8px);
+    border-radius: 100px;
+    width: 608px;
+    height: 64px;
+    outline: none;
+    border: none;
+    padding: 0 188px 0 24px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .wrapperInput{
@@ -130,3 +129,244 @@
     outline: none;
 }
 
+@media (min-width: 320px) {
+    .header{
+        background-image: url(../public/img/mobile-bg.png);
+        background-size: cover ;
+    }
+
+    .search{
+        padding:  0 ;
+    }
+
+    .input{
+        width: inherit;
+        height: 56px;
+        padding: 0 24px;
+    }
+
+    .btn{
+        width: inherit;
+        height: 56px;
+        position: relative;
+        margin-top: 16px;
+    }
+
+    .title{
+        font-size: 36px;
+        line-height: 40px;
+        width: auto;
+        padding-top: 30px;
+    }
+
+    .text{
+        font-size: 20px;
+        line-height: 26px;
+        width: auto;
+        padding: 56px 0 24px ;
+    }
+
+    .left{
+        margin: 16px 0 ;
+    }
+
+    .right{
+        margin: 16px 14px;
+    }
+
+    .link{
+        font-size: 16px;
+        margin-left: 11px;
+        width: max-content;
+    }
+
+    .logo{
+        font-size: 16px;
+    }
+
+    .active::after{
+        top: 15px;
+    }
+
+    .line{
+        top: 57px;
+    }
+
+    .wrapperInput{
+        padding-bottom: 32px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 426px) {
+
+    .header{
+        background-image: url(../public/img/ipad-bg.png);
+        background-size: cover ;
+    }
+
+    .input{
+        width: 400px;
+        height: 56px;
+        padding: 0 196px 0 24px;
+    }
+
+    .btn{
+        width: 150px;
+        height: 56px;
+        position: absolute;
+        margin-top: 0;
+    }
+
+    .wrapperInput{
+        padding-bottom: 32px;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .header{
+        background-image: url(../public/img/ipad-bg.png);
+        background-size: cover;
+    }
+
+    .logo{
+        font-size: 20px;
+    }
+
+    .left{
+        margin: 22px 0 18px 0 ;
+    }
+
+    .link{
+        font-size: 18px;
+        margin-left: 34px;
+        width: max-content;
+    }
+
+    .right{
+        margin: 22px 0 18px 0 ;
+    }
+
+    .line{
+        top: 66px;
+    }
+
+    .active::after{
+        top: 18px;
+    }
+
+    .title{
+        width: 385px;
+        padding-top: 40px;
+    }
+
+    .text{
+        font-size: 18px;
+        line-height: 24px;
+        width: 452px;
+        padding: 16px 0 24px ;
+    }
+
+    .search{
+        padding-left:  122px ;
+    }
+
+    .input{
+        width: 448px;
+        height: 56px;
+        padding: 0 196px 0 24px;
+    }
+
+    .btn{
+        width: 160px;
+        height: 56px;
+        position: absolute;
+        margin-top: 0;
+    }
+
+    .wrapperInput{
+        padding-bottom: 32px;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .header{
+        background-image: url(../public/img/bg.png);
+        background-size: cover ;
+    }
+
+    .left{
+        margin: 30px 0 26px 0;
+    }
+
+    .right{
+        margin: 30px 0 26px 0;
+    }
+
+    .line{
+        top: 83px;
+    }
+
+    .active::after{
+        top: 27px;
+    }
+
+    .title{
+        font-size: 60px;
+        line-height: 64px;
+        padding-top: 80px;
+    }
+    
+    .text{
+        font-size: 18px;
+        line-height: 24px;
+        padding: 32px 0 64px;
+    }
+
+    .search{
+        padding-left:  200px ;
+    }
+
+    .wrapperInput{
+        padding-bottom: 80px;
+    }
+
+    .input{
+        width: 608px;
+        height: 64px;
+        padding: 0 196px 0 24px;
+    }
+
+    .btn{
+        width: 168px;
+        height: 64px; 
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+    .header{
+        background-image: url(../public/img/bg.png);
+        background-size: cover;
+    }
+
+    .search{
+        padding-left:  280px ;
+    }
+}

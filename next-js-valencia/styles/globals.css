@@ -25,6 +25,27 @@ a {
   margin: auto;
 }
 
+@media (min-width: 320px) {
+  .container {
+    max-width: 94%;
+    min-width: 288px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 89%;
+    min-width: 688px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    min-width: 1113px;
+  }
+}
+
+
 
 
 

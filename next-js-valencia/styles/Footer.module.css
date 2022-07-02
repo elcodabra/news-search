@@ -36,3 +36,66 @@
 .socialItem{
     padding-left: 28px;
 }
+
+@media (min-width: 320px) {
+
+    .footer{
+      flex-direction: column-reverse;
+      position: relative;
+    }
+
+    .copyright{
+        padding: 40px 0 22px 0; 
+    }
+
+    .nav{
+       flex-direction: column; 
+       margin-top: 20px; 
+       padding: 0;
+    }
+
+    .social{
+        position: absolute;
+        top: 24px;
+        right: 0;
+        margin:0;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .footer{
+        flex-direction: row;
+    }
+
+    .nav{
+        flex-direction: row; 
+        margin-top: 21px; 
+        padding: 0;
+     }
+
+     .social{
+        position: relative;
+        top: 21px;
+        height: fit-content;
+    }
+
+    .copyright{
+        padding: 24px 0 18px 0; 
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .copyright{
+        padding: 33px 0 25px 0;
+    }
+
+    .nav{
+        margin-top: 30px;  
+    }
+
+    .social{
+        top: 30px;
+    }
+}

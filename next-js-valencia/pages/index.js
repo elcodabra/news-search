@@ -2,9 +2,7 @@
 const Home = () => (
     
        
-        <div>   
-                <h1> hello app</h1>
-        </div>
+        <div> <h1>главная</h1></div>
 
 )
  
