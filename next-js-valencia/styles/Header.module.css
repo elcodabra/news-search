@@ -1,0 +1,132 @@
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+    margin: 30px 0 26px 104px;
+}
+
+.right{
+    margin: 30px 101px;
+}
+
+.links{
+    display: flex;
+}
+
+.logo{
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--text-white-color);
+}
+
+.link{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--text-white-color);
+    margin-left: 34px;
+}
+
+
+.active::after{
+    position: relative;
+    content: "";
+    width: 100%;
+    background-color: #fff;
+    height: 3px;
+    display: block;
+    top: 24px;
+}
+
+.header{
+    background-image: url(../public/img/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.line{
+    background-color: rgba(196, 196, 196, 0.40);;
+    position: absolute;
+    border:1px;
+    height:2px; 
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.title{
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 64px;
+    color: var(--text-white-color);
+    width: 608px;
+}
+
+.text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--text-white-color);
+    width: 570px;
+    padding: 32px 0 64px ;
+    
+}
+
+.search{
+    padding: 74px 0 0 417px;
+}
+
+.input{
+ background: #FFFFFF;
+ border: 1px solid #D1D2D6;
+ backdrop-filter: blur(8px);
+ border-radius: 100px;
+ width: 608px;
+ height: 64px;
+ outline: none;
+ border: none;
+ padding: 0 188px 0 24px;
+ font-family: 'Roboto';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 16px;
+ line-height: 22px;
+}
+
+.wrapperInput{
+    width: fit-content;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.btn{
+    position: absolute;
+    right: 0;
+    background: #2F71E5;
+    box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+    border-radius: 100px;
+    width: 168px;
+    height: 64px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--text-white-color);
+    border: none;
+    outline: none;
+}
+
