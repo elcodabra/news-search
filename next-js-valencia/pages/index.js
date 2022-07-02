@@ -1,8 +1,12 @@
+import Result from "../components/news-result/Result";
+
 
 const Home = () => (
     
        
-        <div> <h1>главная</h1></div>
+        <div> 
+                <Result/>
+        </div>
 
 )
  
