@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;700&family=Source+Sans+Pro&display=swap');
 
 :root{
   --text-black-color: #1A1B22;
@@ -42,6 +42,7 @@ a {
 @media (min-width: 1440px) {
   .container {
     min-width: 1113px;
+    max-width: 1232px;
   }
 }
 
