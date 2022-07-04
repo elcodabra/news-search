@@ -6,6 +6,7 @@ import{useRouter} from "next/router"
 import { useState,useEffect } from "react";
 
 
+
 const Header = () => {
 
   const [search, setSearch] = useState(true);
@@ -19,14 +20,12 @@ const Header = () => {
     }else{
       setSearch(false)
     }
-})
+  })
 
-
-
-
+  const styleHeader = pathName == "/" ? styles.headerWrapper : styles.headerAnalytic;
 
   return(
-    <div className={styles.header}>
+    <div className={`${styleHeader}`}>
         <NavBar/>
         <hr className={styles.line} />
         {search && <Search/>}
