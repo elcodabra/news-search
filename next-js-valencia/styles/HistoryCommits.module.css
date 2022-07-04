@@ -1,0 +1,41 @@
+
+.commitsWrapper{
+    background: #F5F6F7;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headline{
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 46px;
+    color: var(--text-black-color);
+    margin: 72px 0 64px 0;
+}
+
+.link{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    position: relative;
+}
+
+.right{
+    padding: 85px 15px 73px 0;
+}
+
+.link::after{
+    content: url(..//public/img/arr.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -15px;
+    top: 0;
+    
+}

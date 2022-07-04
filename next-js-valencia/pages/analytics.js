@@ -1,9 +1,13 @@
 
 
-
+import Analytic from "../components/Analytics/Analytic";
 
 const Analytics = () => (
-    <h1>Аналитика</h1>
+
+    <div>
+        <Analytic/>
+    </div>
+
     )
      
     
