@@ -22,7 +22,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    color: var(--text-white-color);
+    color: var(--text-black-color);
 }
 
 .link{
@@ -151,12 +151,12 @@
 }
 
 .logoChanges{
+    color: var(--text-white-color);
     font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    color: var(--text-black-color);
 }
 
 

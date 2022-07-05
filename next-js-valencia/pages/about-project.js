@@ -1,7 +1,11 @@
     
     
     const AboutProject = () => (
-    <h1> О проекте </h1>
+
+        <div>
+            <h1 className="container"> О проекте </h1>
+        </div>
+    
     )
      
     

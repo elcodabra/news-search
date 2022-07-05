@@ -174,6 +174,7 @@
 
     .item{
         margin-bottom: 8px;
+        padding-top: 3px;
     }
 
     .btn{
@@ -206,6 +207,7 @@
     .item{
         margin-bottom: 8px;
         max-width: 224px;
+        padding-top: 0;
     }
 
     .content{

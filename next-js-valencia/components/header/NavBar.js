@@ -13,7 +13,7 @@ const NavBar = () => {
 
 const pathName = useRouter().asPath;
 
-    const stylesLogo = (pathName === "/analytics" || pathName === "/about-project" ) ? styles.logoChanges : styles.logo;
+    const stylesLogo = (pathName === "/") ? styles.logoChanges : styles.logo;
     const stylesHover = (pathName === "/analytics") ? styles.analyticHover:null;
     const stylesLinkChanges = (pathName === "/about-project") ? styles.activeLinkAboutPr:null;
     const stylesActiveChanges = (pathName === "/about-project") ? styles.activeAbout:null;  
@@ -30,7 +30,7 @@ return(
                 {navigation.map(({id,title,path}) => (
                      <Link href={path} key = {id}>
                         <a className = {`${styles.link} ${stylesHover}
-                         ${(pathName == path) ? styles.active: null}
+                         ${pathName == path ? styles.active: null}
                          ${pathName == path ? styles.activeLinkHome : null}
                          ${pathName == path ? stylesLinkChanges : null }
                          ${pathName == path ? stylesActiveChanges : null }

@@ -33,22 +33,19 @@ a {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 89%;
-    min-width: 688px;
+    width: 688px;
   }
 }
 
 @media (min-width: 1024px) {
   .container {
-    max-width: 911px;
-    min-width: 688px;
+    width: 911px;
   }
 }
 
 @media (min-width: 1440px) {
   .container {
-    min-width: 1113px;
-    max-width: 1232px;
+   width: 1232px;
   }
 }
 
