@@ -1,6 +1,7 @@
 
 .commitsWrapper{
     background: #F5F6F7;
+    padding-bottom: 136px;
 }
 
 .header{
@@ -39,3 +40,43 @@
     top: 0;
     
 }
+
+.historySlider{
+    width: 100%;
+    background: #F5F6F7;
+    height: 288px;
+   
+  }
+
+  .item{
+    max-width: 400px;
+    height: 288px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    display: block;
+    
+  }
+
+  .historySlider::before {
+    content: "";
+    height: 288px;
+    width: 100px;
+    display: block;
+    position: absolute;
+    z-index: 999;
+    box-shadow: inset 106px 32px 51px -53px #f5f6f7;
+} 
+
+.historySlider::after {
+    content: "";
+    height: 288px;
+    width: 100px;
+    display: block;
+    position: absolute;
+    z-index: 999;
+    box-shadow: inset -50px 0px 41px 0px #f5f6f7;
+    right: 0px;
+    top: 0px;
+} 
+
+ 

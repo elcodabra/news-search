@@ -1,6 +1,6 @@
 import HistoryHeader from "./HistoryHeader";
-import HistoryContent from "./HistoryContent";
 import styles from "../../styles/HistoryCommits.module.css"
+import HistoryCarousel from "./HistoryCarousel";
 
 
 
@@ -9,7 +9,7 @@ const HistoryCommits = () => {
   return(
    <div className={styles.commitsWrapper}>
         <HistoryHeader/>
-        <HistoryContent/>
+        <HistoryCarousel/>
    </div>
   )
 

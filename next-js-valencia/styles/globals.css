@@ -49,6 +49,22 @@ a {
   }
 }
 
+.slick-slide{
+  max-width: 400px;
+  margin: 0 8px 0 8px;
+}
+
+.slick-dots li {
+ top: 50px;
+}
+
+.slick-prev:before, .slick-next:before {
+  display: none;
+}
+
+
+
+
 
 
 
