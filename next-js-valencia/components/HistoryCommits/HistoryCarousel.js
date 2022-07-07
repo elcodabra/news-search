@@ -7,13 +7,14 @@ import HistoryCarouselItem from "./HistoryCarouselItem";
 
 
 
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
       className={className}
       style={{ ...style,
-        right: "0",
+        right: "15px",
         zIndex:"9999",
         position:"absolute",
         backgroundColor:"black",
@@ -38,7 +39,7 @@ function SamplePrevArrow(props) {
     <div
       className={className}
       style={{ ...style,
-        left: "0",
+        left: "15px",
         zIndex:"9999",
         position:"absolute",
         backgroundColor:"black",
@@ -75,6 +76,7 @@ export default class HistoryCarousel extends Component {
              slidesToShow: 3,
              slidesToScroll: 3,
              infinite: false,
+             dots: true,
           }
        },
        {
@@ -84,6 +86,7 @@ export default class HistoryCarousel extends Component {
              slidesToShow: 2,
              slidesToScroll: 2,
              infinite: false,
+             dots: false,
           }
        },
        {
@@ -100,7 +103,7 @@ export default class HistoryCarousel extends Component {
   
     ]
       };
-  
+    
  
     return (
       <div >

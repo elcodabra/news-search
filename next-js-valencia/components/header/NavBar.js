@@ -21,11 +21,11 @@ const pathName = useRouter().asPath;
 return(
     <div className = {`${styles.nav} container`}>
 
-        <div className={styles.left}>
+        <div className={styles.leftPart}>
             <Link href="/"><a className={stylesLogo} >NewsAnalyzer</a></Link>
         </div>
 
-        <div className={styles.right}>
+        <div className={styles.rightPart}>
             <nav className={styles.links}>
                 {navigation.map(({id,title,path}) => (
                      <Link href={path} key = {id}>

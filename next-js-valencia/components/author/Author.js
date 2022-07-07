@@ -7,10 +7,10 @@ const Author = () => (
        
     <div className={`${styles.content} container`}> 
 
-        <div className={styles.left}>
+        <div className={styles.leftPart}>
             <div className={styles.img}></div>
         </div>
-        <div className={styles.right}>
+        <div className={styles.rightPart}>
             <h1 className={styles.headline}>
                  Об авторе
             </h1>

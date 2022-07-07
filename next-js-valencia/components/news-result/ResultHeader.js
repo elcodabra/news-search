@@ -7,11 +7,11 @@ const ResultHeader = () => (
        
     <div className={`${styles.header} container`}> 
 
-        <div className={styles.left}>
+        <div className={styles.leftPart}>
             <h1 className={styles.title}>Результаты поиска</h1>
         </div>
 
-        <div className={styles.right}>
+        <div className={styles.rightPart}>
             <Link href="/analytics"><a className={styles.link}>Посмотреть аналитику</a></Link>
         </div>
 

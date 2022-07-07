@@ -9,10 +9,10 @@ const HistoryHeader = () => {
 
   return(
    <div className={`${styles.header} container`}>
-        <div className={styles.left}>
+        <div className={styles.leftPart}>
           <h1 className={styles.headline}>История коммитов из GitHub</h1>
         </div>
-        <div className={styles.right}>
+        <div className={styles.rightPart}>
             <Link href="https://github.com/M-skyi"><a className={styles.link}>Открыть в  Github</a></Link>
         </div>
    </div>

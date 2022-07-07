@@ -9,7 +9,6 @@ const Home = () => (
     
        
         <div> 
-
                 <Loader/>
                 <NoFoundNews/>
                 <Result/>

@@ -10,7 +10,7 @@
     background-size: cover;
 }
 
-.left{
+.leftPart{
     padding: 80px 56px 80px 0;
 }
 
@@ -53,7 +53,7 @@
         flex-direction: column;
     }
 
-    .left{
+    .leftPart{
         padding: 20px 0 0 0;
         display: flex;
         justify-content: center;
@@ -85,7 +85,7 @@
         height: 232px;
     }
 
-    .left{
+    .leftPart{
         padding: 40px 32px 40px 0 ;
         display: flex;
         justify-content: center;
@@ -112,7 +112,7 @@
         margin-top: 42px;  
     }
 
-    .left{
+    .leftPart{
         padding: 40px 60px 40px 40px ;
         display: flex;
         justify-content: center;
