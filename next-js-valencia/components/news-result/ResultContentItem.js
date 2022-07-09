@@ -10,7 +10,7 @@ const ResultContentItem = ({title,description,author,publishedAt,img,url}) => (
    
 
     <div className={styles.resultContentItem}> 
-        <Link href={url}>
+        <Link href={url} >
              <a  className={styles.item}>
 
                 <div className={styles.wrapperImg}>
