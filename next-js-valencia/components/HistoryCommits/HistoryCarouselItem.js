@@ -1,32 +1,29 @@
 import styles from "../../styles/HistoryCommits.module.css"
 import Link from "next/link";
-import Image from "next/image"
-import userImg from "../../public/img/authorImg.jpg"
+import Image from "next/image";
 
-
-const HistoryCarouselItem = () => {
+const HistoryCarouselItem = ({date,name,email,message,itemUrl,imgUrl}) => {
 
   return(
    <div className={styles.Wrapper}>
-    <Link href={"#"} >
+    <Link href={itemUrl} >
           <a className={styles.item}>
-              <div className={styles.date}>14 августа, 2019</div>
+              <div className={styles.date}>{date}</div>
 
               <div className={styles.userProfile}>
               
                <div className={styles.imgWrapper}>
-                    <Image className={styles.img} layout="responsive" src = {userImg}/>
+                    <Image className={styles.img} layout="fill" src={imgUrl} alt="commit author"/>
                </div>
 
                 <div className={styles.nameEmail}>
-                  <div className={styles.name}>Антон Долинин</div>
-                  <div className={styles.email}>anton@yandex.ru</div>
+                  <div className={styles.name}>{name}</div>
+                  <div className={styles.email}>{email}</div>
                 </div>
               </div>
               
                 <div className={styles.text}>
-                  Emmet (formerly Zen Coding) is a web-
-                  developer’s toolkit that can greatly improve your HTML & CSS workflow.
+                  {message}
                 </div>
           </a>
    </Link>

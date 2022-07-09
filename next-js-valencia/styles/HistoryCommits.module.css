@@ -111,7 +111,7 @@
     text-overflow: ellipsis;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-    max-width: 265px;
+    max-width: 320px;
     display: -webkit-box;
 }
 
@@ -147,6 +147,7 @@
 .imgWrapper{
     width: 64px;
     height: 64px;
+    position: relative;
 }
 
 
@@ -214,7 +215,7 @@
     .name{
         font-size: 20px;
         padding-left: 4px;
-        max-width: 200px;
+        max-width: 225px;
     }
 
     .imgWrapper{
@@ -333,7 +334,7 @@
     .name{
         font-size: 26px;
         padding-left: 0;
-        max-width: 265px;
+        max-width: 320px;
     }
 
     .nameEmail{

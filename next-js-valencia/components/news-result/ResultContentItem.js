@@ -3,23 +3,29 @@ import Link from "next/link";
 import Image from "next/image"
 import newsImg from "../../public/img/result-img.png"
 
-const ResultContentItem = () => (
+
+
+const ResultContentItem = ({title,description,author,publishedAt,img,url}) => (
     
-       
+   
+
     <div className={styles.resultContentItem}> 
-        <Link href="#">
+        <Link href={url}>
              <a  className={styles.item}>
 
-                 <Image className={styles.img} src = {newsImg}/>
+                <div className={styles.wrapperImg}>
+                   <Image className={styles.img} layout='fill' src={newsImg}/>
+                </div>
 
                  <div className={styles.wrapperText}>
-                    <span className={styles.date}>2 августа, 2019</span>
 
-                    <h1 className={styles.headline}>Национальное достояние – парки</h1>
+                    <span className={styles.date}>{publishedAt}</span>
 
-                    <p className={styles.text}>В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <h1 className={styles.headline}>{title}</h1>
+
+                    <p className={styles.text}>{description}</p>
     
-                    <span className={styles.source}>Лента.com</span>
+                    <span className={styles.source}>{author}</span>
                 
                  </div>
 
