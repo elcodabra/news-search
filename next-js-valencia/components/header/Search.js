@@ -9,48 +9,55 @@ import { getInputValue } from "../../pages/api/api";
 
 
 
+const Search = ({
+    showPreloader,
+    hidePreloader,
+    showNoNewsFound,
+    hideNoNewsFound,
+    showSearchResult,
+    hideSearchResult
+    }) => {
 
-
-
-
-const Search = () => {
-
-    const [topic, setTitle] = useState('');
+    const [topic, setTopic] = useState('');
 
     getInputValue(topic);
-
-
 
     const searchNews = (e) => {
 
         e.preventDefault();
-    
+
+        hideNoNewsFound();
     
         if (topic.length === 0) {
-    
+            
+            hideSearchResult(); 
+
             alert("«Нужно ввести ключевое слово»");
-    
+
             return;
+        }else if ( setTopic(topic) !=  topic){
+
+            hideSearchResult();
         }
-        
+
+        showPreloader()
     
         gettingNews().then(function (item) {
-    
-            console.log(item);
                 
-            // if (item.length  === 0) {
+            if (item.length  === 0) {
                 
-            //     hideLoader();
-            //     showNoNewsFound();
+                hidePreloader();
+                showNoNewsFound();
     
-            // }else{
-            //     hideLoader();
-            //     showSearchResult();
-            // }
+            }else{
+                hidePreloader();
+                showSearchResult();
+            }
     
     
           }).catch((error) => {
             alert("«Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз»");
+            hidePreloader();
          })
     
     }
@@ -67,7 +74,7 @@ const Search = () => {
         <form className={styles.form}>
              
             <div className={styles.wrapperInput}  >
-                <input className={styles.input} onChange={event => setTitle(event.target.value)}   type="text" placeholder="Введите тему новости"></input>
+                <input className={styles.input} onChange={event => setTopic(event.target.value)}   type="text" placeholder="Введите тему новости"></input>
                 <input className={styles.btn} type="submit" onClick={searchNews} value="Искать"></input>
             </div>
 

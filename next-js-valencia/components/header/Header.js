@@ -5,32 +5,47 @@ import Search from "./Search";
 import{useRouter} from "next/router"
 import { useState,useEffect } from "react";
 
+const Header = ({
+  showPreloader,
+  hidePreloader,
+  showNoNewsFound,
+  hideNoNewsFound,
+  showSearchResult,
+  hideSearchResult
+}) => {
 
-
-const Header = () => {
-
+ 
   const [search, setSearch] = useState(true);
+ 
 
   const pathName = useRouter().asPath;
 
-  useEffect(()=>{
+    useEffect(()=>{
 
-    if (pathName === "/") {
-      setSearch(true)
-    }else{
-      setSearch(false)
-    }
-  })
-
-  const styleHeader = pathName == "/" ? styles.headerWrapper : styles.headerAnalytic;
+      if (pathName === "/") {
+        setSearch(true)
+      }else{
+        setSearch(false)
+      }
+    })
 
   return(
-    <div className={`${styleHeader}`}>
-        <NavBar/>
-        <hr className={styles.line} />
-        {search && <Search/>}
-        
-    </div>
+
+        <div className={pathName == "/" ? styles.headerWrapper : styles.headerAnalytic}>
+          <NavBar/>
+          <hr className={styles.line} />
+          {search && (
+          <Search 
+            showPreloader = {showPreloader}
+            hidePreloader = {hidePreloader}
+            showNoNewsFound = {showNoNewsFound}
+            hideNoNewsFound = {hideNoNewsFound}
+            showSearchResult = {showSearchResult}
+            hideSearchResult = {hideSearchResult}
+          />
+          )}
+        </div>   
+    
   )
 
 }

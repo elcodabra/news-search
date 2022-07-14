@@ -1,7 +1,5 @@
 import styles from "../../styles/NewsResult.module.css"
 import Link from "next/link";
-import Image from "next/image"
-import newsImg from "../../public/img/result-img.png"
 
 
 
@@ -14,7 +12,7 @@ const ResultContentItem = ({title,description,author,publishedAt,img,url}) => (
              <a  className={styles.item}>
 
                 <div className={styles.wrapperImg}>
-                   <Image className={styles.img} layout='fill' src={newsImg}/>
+                   <img className={styles.img} src={img} alt="News images" />
                 </div>
 
                  <div className={styles.wrapperText}>

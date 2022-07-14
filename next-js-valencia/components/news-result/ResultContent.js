@@ -4,13 +4,9 @@ import { useState,useEffect } from "react";
 
 
 
-
-
 const ResultContent = () => {
 
     const [dataNews, setDataNews] = useState([]);
-    const [dataNewsItem, setDataNewsItem] = useState([]);
-
     const [itemsResult, setItemsResult] = useState([])
 
 
@@ -24,16 +20,6 @@ const ResultContent = () => {
 
     },[])
 
-    useEffect(() => {
-
-        let dataObjNews = JSON.parse(localStorage.getItem("newsItem"));
-        let newsData = JSON.parse(localStorage.getItem("newsData"));
-
-        setDataNews(dataObjNews)
-
-    },[])
-
-
     const moreNews = () => {
         setItemsResult([ ...itemsResult, 
             <ResultContentItem/>,
@@ -43,7 +29,13 @@ const ResultContent = () => {
         
     }
 
-    // console.log(dataNews.arrImg);
+    useEffect(() => {
+
+        let dataObjNews = JSON.parse(localStorage.getItem("newsItem"));
+
+        setDataNews(dataObjNews)    
+
+    },[])
 
     return(
         <div className={`${styles.content} container`}> 

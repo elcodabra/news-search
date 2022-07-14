@@ -3,7 +3,6 @@ import styles from "../../styles/NoFoundNews.module.css"
 
 const NoFoundNews = () => {
 
-  
   return(
     <div className = {styles.wrapper} >
 

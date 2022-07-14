@@ -232,36 +232,6 @@
     }
 }
 
-@media (min-width: 426px) {
-
-    .headerWrapper{
-        background-image: url(../public/img/ipad-bg.png);
-        background-size: cover ;
-    }
-
-    .input{
-        width: 400px;
-        height: 56px;
-        padding: 0 196px 0 24px;
-    }
-
-    .btn{
-        width: 150px;
-        height: 56px;
-        position: absolute;
-        margin-top: 0;
-    }
-
-    .wrapperInput{
-        padding-bottom: 32px;
-        width: max-content;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-}
-
 @media (min-width: 768px) {
 
     .headerWrapper{

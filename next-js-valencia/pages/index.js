@@ -5,18 +5,21 @@ import Result from "../components/news-result/Result";
 import NoFoundNews from './../components/NoFoundNews/NoFoundNews';
 
 
-const Home = () => (
-    
-       
+const Home = ({loader,noFound,result}) => {
+
+       return(
         <div> 
-                <Loader/>
-                <NoFoundNews/>
-                <Result/>
+                {loader && <Loader/>}
+                {noFound && <NoFoundNews/>}
+                {result && <Result/>} 
                 <Author/>
                 <HistoryCommits/>
-        </div>
+        </div> 
+        
+       )
+        
 
-)
+}
  
 
 

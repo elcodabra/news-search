@@ -340,6 +340,10 @@
     .nameEmail{
         padding-left: 16px;
     }
+
+    .headline {
+        max-width: none;
+    }
 }
 
  

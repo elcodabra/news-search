@@ -50,12 +50,13 @@ let apiKey = "53dda3d904814c45bfe91ca26f3c68ff";
      let newsRes = JSON.stringify(articles)
      localStorage.setItem('newsData', newsRes)
 
-     let dataTopic = JSON.stringify(topic.pop())
+     let dataTopic = JSON.stringify(topicItem)
      localStorage.setItem('topic',dataTopic)
 
      let totalRes = JSON.stringify(data)
      localStorage.setItem('totalResults',totalRes)
-  
+
+
      return articles
 }
 
@@ -90,13 +91,13 @@ const gettingCommits = async (e) => {
 
   })
 
-  changeDate(commitsItem.arrDate,commitsItem.arrChangesDate)
+  changeDate(commitsItem.arrDate,commitsItem.arrChangesDate);
 
-      let dataCommits = JSON.stringify(commitsItem)
-      localStorage.setItem('commitsItem', dataCommits)   
+      let dataCommits = JSON.stringify(commitsItem);
+      localStorage.setItem('commitsItem', dataCommits);   
        
    }   
-       
+   
  gettingCommits()
 
 export{
