@@ -1,35 +1,12 @@
 import styles from "../../styles/Analytics.module.css"
 import ProgressBarItem from "./ProgressBarItem";
-
-function getDate() {
-
-    let item = []
-  
-    let dateCurrent = new Date();
-  
-  
-    for (let i = 0; i < 7; i++) {
-  
-               let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
-  
-               let tempDate = new Date();
-               tempDate.setDate(dateCurrent.getDate()-i);
-               
-               let str = tempDate.getDate() + ", " + days[tempDate.getDay()]; 
-               
-               item.push(str);
-        
-    }
-  
-    item.reverse()
-  
-    return item
-  
-  }
+import { getDaysWeek } from "../../app/main";
 
 
-const ProgressBar = () => {
- 
+
+
+
+const ProgressBar = ({itemNum}) => {
 
     return(
 
@@ -40,8 +17,8 @@ const ProgressBar = () => {
         <span className={styles.percent}>75</span>
         <span className={styles.percent}>100</span> 
 
-          {getDate().map((item,index) =>(
-              <ProgressBarItem key={index} dateItem={item} />   
+          {getDaysWeek().map((item,i) =>(
+              <ProgressBarItem key={i} dateItem={item} itemNum = {itemNum[i]} />   
           ))} 
 
         <span className={`${styles.percent} ${styles.percentPos}`}>0</span>

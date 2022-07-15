@@ -6,7 +6,7 @@
 import {changeDate} from "../../app/main"
 
 
-let apiKey = "53dda3d904814c45bfe91ca26f3c68ff";
+let apiKey = "398b8b05cfd74c32a83a9f12f6118f07";
 
   let topic = [];
 
@@ -14,12 +14,57 @@ let apiKey = "53dda3d904814c45bfe91ca26f3c68ff";
         topic.push(newsTopic);
     } 
 
+    let arrDateItem = [];
+
+    for (let i = 0; i < 7; i++) {
+       
+       let getDate = new Date(new Date().getTime() - (i * 24 * 60 * 60 * 1000)).toLocaleDateString('sv-SE');
+       
+       arrDateItem.push(getDate);
+    }
+
+  
 
   const gettingNews = async (e) => {
 
   let topicItem = topic.pop()
 
-  const url = `https://nomoreparties.co/news/v2/everything?q=${topicItem}&from="2022-06-07"&to="2022-06-07"&sortBy=publishedAt&pageSize=100&apiKey=${apiKey}`;
+  const url = `https://nomoreparties.co/news/v2/everything?q=${topicItem}&from=${arrDateItem[6]}&to=${arrDateItem[0]}&sortBy=publishedAt&pageSize=100&apiKey=${apiKey}`;
+
+  let arrUrlItem = [];
+
+     for (let i = 6; i >= 0; i--) {
+        
+        let urlDay = `https://nomoreparties.co/news/v2/everything?q=${topicItem}&from=${arrDateItem[i]}&to=${arrDateItem[i]}&sortBy=publishedAt&pageSize=100&apiKey=${apiKey}`;
+        
+        arrUrlItem.push(urlDay)
+  
+     }
+
+     let arrDaysItem = [];
+
+     let requests = arrUrlItem.map(url => fetch(url));
+    
+     Promise.all(requests)
+     .then((responses) => {
+        
+       const dataResults = responses.map((response) => response.json());
+ 
+       return Promise.all(dataResults);   
+ 
+     })
+     .then((data) => {
+        data.forEach(el => {
+    
+          let dataNewsDay = el.articles
+ 
+          arrDaysItem.push(dataNewsDay);
+ 
+          localStorage.setItem(`analyticsDayArr`, JSON.stringify(arrDaysItem));
+   
+        })
+     })
+
 
   const response = await fetch(url);
     const data = await response.json();

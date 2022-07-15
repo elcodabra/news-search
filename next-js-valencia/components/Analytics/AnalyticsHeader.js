@@ -1,7 +1,15 @@
 import styles from "../../styles/Analytics.module.css"
 import Link from "next/link";
 
+
+
+
+
+
 const AnalyticsHeader = () => {
+
+
+  
 
   
   return(

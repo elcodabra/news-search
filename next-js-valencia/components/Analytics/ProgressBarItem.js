@@ -3,7 +3,7 @@ import styles from "../../styles/Analytics.module.css"
 
 
 
-const ProgressBarItem = ({dateItem}) => {
+const ProgressBarItem = ({dateItem,itemNum}) => {
 
     return(
 
@@ -12,8 +12,8 @@ const ProgressBarItem = ({dateItem}) => {
 
                 <div className={styles.itemDate}>{dateItem}</div>
                 <div className={styles.itemCounterWrapper}>
-                    <progress className={styles.itemValue} value="50" max="100"></progress>
-                    <div className={styles.itemCounter}>{50}</div>
+                    <progress className={styles.itemValue} value={itemNum} max="100"></progress>
+                    <div className={styles.itemCounter}>{itemNum}</div>
                 </div>
                 
           </div>

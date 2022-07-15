@@ -1,7 +1,8 @@
 import styles from "../../styles/Analytics.module.css"
 import ProgressBar from './AnalyticsProBar';
+import { currentMonth } from "../../app/main";
 
-const AnalyticsContent = () => {
+const AnalyticsContent = ({itemNum}) => {
 
     return(
 
@@ -11,13 +12,13 @@ const AnalyticsContent = () => {
             <div className={styles.nav}>
               <div className={`${styles.date} ${styles.textStyle}`}>
                  Дата 
-                <p className={`${styles.dateItem} ${styles.textStyle}`}>(август)</p>
+                <p className={`${styles.dateItem} ${styles.textStyle}`}>({currentMonth()})</p>
               </div>
               <div className={`${styles.navHeadline} ${styles.textStyle}`}>
                 Кол-во упоминаний
               </div>
             </div>
-             <ProgressBar/>
+             <ProgressBar itemNum = {itemNum}/>
          </div>
       </div>
       

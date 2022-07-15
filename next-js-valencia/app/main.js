@@ -13,6 +13,77 @@ const changeDate = (arrayDate,newDateArr) => {
    
 }
 
+const currentMonth = () => {
+
+    let date = new Date()
+    date.getMonth()
+    let currentDateMonth = new Date(date).toLocaleDateString('ru', {month: 'long',});
+  
+    return currentDateMonth
+  
+  }
+
+  const getDaysWeek = () => {
+
+    let item = []
+  
+    let dateCurrent = new Date();
+  
+  
+    for (let i = 6; i >= 0; i--) {
+  
+               let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+  
+               let tempDate = new Date();
+               tempDate.setDate(dateCurrent.getDate()-i);
+               
+               let str = tempDate.getDate() + ", " + days[tempDate.getDay()]; 
+               
+               item.push(str);
+        
+    }
+  
+    return item
+
+  }
+
+  function getDataLocalStor() {
+
+    let analyticsDayArr = [];
+
+    if (typeof window !== 'undefined') {
+
+        let analyticsDay = localStorage.getItem('analyticsDayArr');
+        analyticsDay = JSON.parse(analyticsDay);
+
+        for (let i = 0; i < analyticsDay.length; i++) {
+        
+            analyticsDayArr.push(analyticsDay[i])
+        
+        };
+
+      }
+
+      return analyticsDayArr 
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
 export{
-    changeDate
+    changeDate,
+    currentMonth,
+    getDaysWeek,
+    getDataLocalStor
 }
+
+
+
