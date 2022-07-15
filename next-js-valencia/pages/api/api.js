@@ -32,7 +32,8 @@ let apiKey = "53dda3d904814c45bfe91ca26f3c68ff";
       arrUrl: [],
       arrPublishedAt: [],
       arrAuthor: [],
-      arrPublishedDate: []
+      arrPublishedDate: [],
+      arrChangesDate: []
    }
 
       articles.forEach(el=> {
@@ -43,6 +44,8 @@ let apiKey = "53dda3d904814c45bfe91ca26f3c68ff";
          newsItem.arrPublishedAt.push(el.publishedAt);
          newsItem.arrAuthor.push(el.author);
      }); 
+
+       changeDate(newsItem.arrPublishedAt,newsItem.arrChangesDate);
      
      let dataObj = JSON.stringify(newsItem)
      localStorage.setItem('newsItem', dataObj)
@@ -55,7 +58,6 @@ let apiKey = "53dda3d904814c45bfe91ca26f3c68ff";
 
      let totalRes = JSON.stringify(data)
      localStorage.setItem('totalResults',totalRes)
-
 
      return articles
 }
