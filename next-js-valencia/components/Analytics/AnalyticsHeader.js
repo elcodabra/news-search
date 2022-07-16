@@ -1,15 +1,38 @@
 import styles from "../../styles/Analytics.module.css"
 import Link from "next/link";
+import { useState,useEffect } from "react";
 
 
 
 
 
+const AnalyticsHeader = ({topic,totalCount,totalRes}) => {
 
-const AnalyticsHeader = () => {
 
+  const [totalChanges, setTotalChanges] = useState("")
 
-  
+  let totalLength = totalRes.toString().length;
+
+  useEffect(() => {
+
+    if (totalLength > 4) {
+ 
+     let stringCount = totalRes.toString().slice(0, 2) + " " + totalRes.toString().slice(2, 5);
+ 
+     setTotalChanges(stringCount)
+ 
+     } else if(totalLength == 4) {
+ 
+     let stringCount = totalRes.toString().slice(0, 1) + " " + totalRes.toString().slice(1, 5);
+ 
+     setTotalChanges(stringCount)
+ 
+     } else {
+      setTotalChanges(totalRes)
+     }
+   
+
+  },[totalRes])
 
   
   return(
@@ -21,16 +44,16 @@ const AnalyticsHeader = () => {
         <div className = {styles.requestNews}>
               <p className = {styles.requestTopic}>
                   Вы спросили: 
-                <span className = {styles.requestTopic}> «Путешествия»</span>
+                <span className = {styles.requestTopic}>«{topic}»</span>
               </p>
               <div className = {styles.dataWrapper}>
                 <p className = {styles.requestData}>
                     Новостей за неделю: 
-                    <span className = {styles.requestDataItem}> 34 324</span>
+                    <span className = {styles.requestDataItem}> {totalChanges}</span>
                   </p>
                   <p className = {styles.requestData}>
                     Упоминаний в загаловках:
-                    <span className = {styles.requestDataItem}> 235</span>
+                    <span className = {styles.requestDataItem}> {totalCount}</span>
                   </p>
               </div>   
         </div>

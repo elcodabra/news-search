@@ -32,14 +32,14 @@ const currentMonth = () => {
   
     for (let i = 6; i >= 0; i--) {
   
-               let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+         let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
   
-               let tempDate = new Date();
-               tempDate.setDate(dateCurrent.getDate()-i);
+         let tempDate = new Date();
+         tempDate.setDate(dateCurrent.getDate()-i);
                
-               let str = tempDate.getDate() + ", " + days[tempDate.getDay()]; 
+         let str = tempDate.getDate() + ", " + days[tempDate.getDay()]; 
                
-               item.push(str);
+         item.push(str);
         
     }
   
@@ -47,42 +47,10 @@ const currentMonth = () => {
 
   }
 
-  function getDataLocalStor() {
-
-    let analyticsDayArr = [];
-
-    if (typeof window !== 'undefined') {
-
-        let analyticsDay = localStorage.getItem('analyticsDayArr');
-        analyticsDay = JSON.parse(analyticsDay);
-
-        for (let i = 0; i < analyticsDay.length; i++) {
-        
-            analyticsDayArr.push(analyticsDay[i])
-        
-        };
-
-      }
-
-      return analyticsDayArr 
-    
-  }
-
-
-
-
-
-
-
-
-
-
-
 export{
     changeDate,
     currentMonth,
     getDaysWeek,
-    getDataLocalStor
 }
 
 

@@ -4,11 +4,6 @@ import { useState,useEffect } from "react";
 import { getInputValue } from "../../pages/api/api";
 
 
-
-
-
-
-
 const Search = ({
     showPreloader,
     hidePreloader,

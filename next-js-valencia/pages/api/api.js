@@ -1,12 +1,6 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
-// export default function handler(req, res) {
-//   res.status(200).json({ name: 'John Doe' })
-// }
 import {changeDate} from "../../app/main"
 
-
-let apiKey = "398b8b05cfd74c32a83a9f12f6118f07";
+let apiKey = "2213f1e36fb8400bb4eef4e632efffe3";
 
   let topic = [];
 
@@ -23,7 +17,6 @@ let apiKey = "398b8b05cfd74c32a83a9f12f6118f07";
        arrDateItem.push(getDate);
     }
 
-  
 
   const gettingNews = async (e) => {
 
@@ -140,8 +133,11 @@ const gettingCommits = async (e) => {
 
   changeDate(commitsItem.arrDate,commitsItem.arrChangesDate);
 
-      let dataCommits = JSON.stringify(commitsItem);
-      localStorage.setItem('commitsItem', dataCommits);   
+        
+      if (typeof window !== 'undefined') {
+         let dataCommits = JSON.stringify(commitsItem);
+         localStorage.setItem('commitsItem', dataCommits); 
+       }
        
    }   
    

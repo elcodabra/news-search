@@ -8,18 +8,21 @@ const Analytic = () => {
 
   const [topicRequest, setTopicRequest] = useState([])
   const [analyticsDay, setAnalyticsDay] = useState([])
+  const [totalResults, setTotalResults] = useState([])
 
 
     useEffect(() => {
 
       let topicRequest = JSON.parse(localStorage.getItem("topic"));
       let analyticsDay = JSON.parse(localStorage.getItem('analyticsDayArr'));
+      let totalResults = JSON.parse(localStorage.getItem('totalResults'));
   
       setTopicRequest(topicRequest)
       setAnalyticsDay(analyticsDay)
+      setTotalResults(totalResults.totalResults)
 
     },[])
-  
+
 
     let itemCountArr = [];
 
@@ -50,12 +53,13 @@ const Analytic = () => {
         getAnalyticsData(item)
       })
 
-      console.log(itemCountArr);
+      let x = 0;
 
+      let countHeadlines = itemCountArr.map(i=>x+=i, x).reverse()[0];
   
   return(
     <div>
-        <AnalyticsHeader/>
+        <AnalyticsHeader topic = {topicRequest} totalCount = {countHeadlines} totalRes = {totalResults}/>
         <AnalyticsContent itemNum = {itemCountArr}/>
     </div>
   )

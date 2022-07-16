@@ -213,6 +213,7 @@
 
     .source{
         margin: 0 0 16px 0;
+        width: 260px;
     }
 }
 
@@ -279,6 +280,10 @@
         width: 100%;
         height: 150px;
     }
+
+    .source{
+        width: 200px;
+    }
     
 }
 
@@ -301,6 +306,7 @@
 
     .source{
         margin: 18px 8px 24px 8px;
+        width: 250px;
     }
 
 }
@@ -342,6 +348,10 @@
     .headline{
         font-size: 26px;
         line-height: 30px;
+    }
+
+    .source{
+        width: 355px;
     }
 
 
