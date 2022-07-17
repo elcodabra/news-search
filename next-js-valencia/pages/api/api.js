@@ -80,7 +80,7 @@ let apiKey = "2213f1e36fb8400bb4eef4e632efffe3";
          newsItem.arrImg.push(el.urlToImage);
          newsItem.arrUrl.push(el.url);
          newsItem.arrPublishedAt.push(el.publishedAt);
-         newsItem.arrAuthor.push(el.author);
+         newsItem.arrAuthor.push(el.source.name);
      }); 
 
        changeDate(newsItem.arrPublishedAt,newsItem.arrChangesDate);
@@ -96,6 +96,8 @@ let apiKey = "2213f1e36fb8400bb4eef4e632efffe3";
 
      let totalRes = JSON.stringify(data)
      localStorage.setItem('totalResults',totalRes)
+
+     console.log(articles);
 
      return articles
 }
