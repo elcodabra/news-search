@@ -102,7 +102,7 @@ let apiKey = "2213f1e36fb8400bb4eef4e632efffe3";
 
 
 
-const gettingCommits = async (e) => { 
+const gettingCommit = async (e) => { 
 
   let reposUrl = `https://api.github.com/repos/M-skyi/Test_Valencia_JS/commits?&&per_page=20`;
 
@@ -141,7 +141,7 @@ const gettingCommits = async (e) => {
        
    }   
    
- gettingCommits()
+   const gettingCommits =  gettingCommit();
 
 export{
   gettingCommits,
