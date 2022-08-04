@@ -83,7 +83,6 @@ let apiKey = "2213f1e36fb8400bb4eef4e632efffe3";
          newsItem.arrAuthor.push(el.source.name);
      }); 
 
-       changeDate(newsItem.arrPublishedAt,newsItem.arrChangesDate);
      
      let dataObj = JSON.stringify(newsItem)
      localStorage.setItem('newsItem', dataObj)
@@ -111,36 +110,12 @@ const gettingCommit = async (e) => {
   const response = await fetch(reposUrl)
   
   const data = await response.json()
-
-  let commitsItem = {
-     arrDate: [],
-     arrImgUrl: [],
-     arrName: [],
-     arrEmail: [],
-     arrMessage: [],
-     arrItemUrl: [],
-     arrChangesDate: []
-  }
-
-  data.forEach( el => {
-
-     commitsItem.arrDate.push(el.commit.author.date);
-     commitsItem.arrImgUrl.push(el.author.avatar_url);
-     commitsItem.arrName.push(el.commit.author.name);
-     commitsItem.arrEmail.push(el.commit.author.email);
-     commitsItem.arrMessage.push(el.commit.message);
-     commitsItem.arrItemUrl.push(el.html_url);
-
-  })
-
-  changeDate(commitsItem.arrDate,commitsItem.arrChangesDate);
-
-        
+  
       if (typeof window !== 'undefined') {
-         let dataCommits = JSON.stringify(commitsItem);
+         let dataCommits = JSON.stringify(data);
          localStorage.setItem('commitsItem', dataCommits); 
        }
-       
+  
    }   
    
    const gettingCommits =  gettingCommit();

@@ -6,41 +6,39 @@ import styles from "../../styles/HistoryCommits.module.css"
 import HistoryCarouselItem from "./HistoryCarouselItem";
 import { useState,useEffect } from "react";
 import {setting} from "../../components/HistoryCommits/SettingsSlider"
+import {changeDate} from "../../app/main"
 
 
   const HistoryCarousel = () => {
 
-    const [arrCommits, setArrCommits] = useState([])
     const [itemCommits, setItemCommits] = useState([])
 
-    
     useEffect(() => {
       const dataCommits = JSON.parse(localStorage.getItem("commitsItem"));
       setItemCommits(dataCommits)
-      setArrCommits(dataCommits.arrDate)
     }, [])
 
     return (
       <div >
         <Slider {...setting()}  className={styles.historySlider}>
 
-         {arrCommits.map((item,index) =>(
+         {itemCommits.map((item,index) =>(
 
             <HistoryCarouselItem 
 
             key={index}
+            
+            date = {changeDate(item.commit.author.date)}
 
-            date = {itemCommits.arrChangesDate[index]}
+            name = {item.commit.author.name}
 
-            name = {itemCommits.arrName[index]}
+            email = {item.commit.author.email}
 
-            email = {itemCommits.arrEmail[index]}
+            message = {item.commit.message}
 
-            message = {itemCommits.arrMessage[index]}
+             itemUrl = {item.html_url}
 
-            itemUrl = {itemCommits.arrItemUrl[index]}
-
-            imgUrl = {itemCommits.arrImgUrl[index]}
+             imgUrl = {item.author.avatar_url}
 
             />
 
