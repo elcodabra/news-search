@@ -69,8 +69,7 @@ let apiKey = "2213f1e36fb8400bb4eef4e632efffe3";
       arrUrl: [],
       arrPublishedAt: [],
       arrAuthor: [],
-      arrPublishedDate: [],
-      arrChangesDate: []
+      arrPublishedDate: []
    }
 
       articles.forEach(el=> {

@@ -1,7 +1,7 @@
 import styles from "../../styles/NewsResult.module.css"
 import ResultContentItem from "./ResultContentItem";
 import { useState,useEffect } from "react";
-
+import {changeDate} from "../../app/main"
 
 
 
@@ -93,7 +93,7 @@ const ResultContent = () => {
 
                     author = {dataObjNews.arrAuthor[i]}
 
-                    publishedAt = {dataObjNews.arrChangesDate[i]}
+                    publishedAt = {changeDate(dataObjNews.arrPublishedAt[i])}
 
                     img = {dataObjNews.arrImg[i]}
 
