@@ -5,37 +5,34 @@ import { getInputValue } from "../../pages/api/api";
 
 
 const Search = ({
-    showPreloader,
-    hidePreloader,
-    showNoNewsFound,
-    hideNoNewsFound,
-    showSearchResult,
-    hideSearchResult
-    }) => {
+    loader,
+    noNewsFound,
+    searchResult,
+}) => {
     const [topic, setTopic] = useState('');
     getInputValue(topic);
     const searchNews = (e) => {
         e.preventDefault();
-        hideNoNewsFound();
+        noNewsFound(false);
         if (topic.length === 0) {
-            hideSearchResult();
+            searchResult(false);
             alert("«Нужно ввести ключевое слово»");
             return;
         } else if (setTopic(topic) != topic) {
-            hideSearchResult();
+            searchResult(false);
         }
-        showPreloader()
+        loader(true)
         gettingNews().then(function (item) {
             if (item.length === 0) {
-                hidePreloader();
-                showNoNewsFound();
+                loader(false);
+                noNewsFound(true);
             } else {
-                hidePreloader();
-                showSearchResult();
+                loader(false);
+                searchResult(true);
             }
         }).catch((error) => {
             alert("«Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз»");
-            hidePreloader();
+            loader(false);
         })
     }
     return (

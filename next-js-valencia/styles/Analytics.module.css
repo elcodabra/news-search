@@ -100,11 +100,15 @@
     font-weight: normal;
     color: #B6BCBF;
  }
- 
- .percentPos{
+
+ .percent:first-child{
     margin-left: 94px;
  }
 
+ .percent:nth-child(13){
+    margin-left: 94px;
+ }
+ 
  .itemDate{
     font-family: 'Roboto';
     font-style: normal;
@@ -231,9 +235,14 @@
         margin-left: 126.4px;
     }
 
-    .percentPos{
+    .percent:first-child{
         margin-left: 110px;
-    }
+     }
+
+     .percent:nth-child(13){
+        margin-left: 110px;
+     }
+     
 
     .itemCounter{
         left: 60px;
@@ -284,7 +293,11 @@
         margin-left: 186.4px;
     }
 
-     .percentPos{
+    .percent:first-child{
+        margin-left: 94px;
+     }
+
+     .percent:nth-child(13){
         margin-left: 94px;
      }
 
@@ -304,8 +317,12 @@
         margin-left: 266.4px;
     }
 
-    .percentPos{
+    .percent:first-child{
         margin-left: 94px;
      }
 
+     .percent:nth-child(13){
+        margin-left: 94px;
+     }
+     
  }

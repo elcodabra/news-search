@@ -2,24 +2,18 @@ import Footer from "../footer/Footer";
 import Header from "../header/Header";
 
 
-    const Layout = ({
-        children,
-        showPreloader,
-        hidePreloader,
-        showNoNewsFound,
-        hideNoNewsFound,
-        showSearchResult,
-        hideSearchResult
-    }) => {
+const Layout = ({
+    children,
+    loader,
+    noNewsFound,
+    searchResult,
+}) => {
     return (
         <div>
             <Header
-                showPreloader={showPreloader}
-                hidePreloader={hidePreloader}
-                showNoNewsFound={showNoNewsFound}
-                hideNoNewsFound={hideNoNewsFound}
-                showSearchResult={showSearchResult}
-                hideSearchResult={hideSearchResult}
+                loader={loader}
+                noNewsFound={noNewsFound}
+                searchResult={searchResult}
             />
             {children}
             <Footer />

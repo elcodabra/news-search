@@ -1,5 +1,3 @@
-
-
 const changeDate = (arrayDate) => {
   let dateNews = arrayDate;
   let changeDate = new Date(dateNews).toLocaleDateString('ru', { year: 'numeric', month: 'long', day: 'numeric' }).slice(0, -3);
@@ -51,12 +49,31 @@ const changeImageItem = (image, changeImg) => {
   return image
 }
 
-const changeAuthorItem = (author,changeAuthor) => {
+const changeAuthorItem = (author, changeAuthor) => {
   if (author === null || author === "") {
     changeAuthor("Автор не указан")
   }
-  
+
   return author
+}
+
+function dataAnalytics() {
+  let count = [];
+  function getAnalyticsData(arr, topic) {
+    let arrData = [];
+    arr.forEach(el => {
+      arrData.push(el.title);
+    })
+    let arrDataText = arrData.join("");
+    let countTitle = 0;
+    let pos = arrDataText.toLowerCase().indexOf(`${topic}`.toLowerCase());
+    while (pos != -1) {
+      countTitle++;
+      pos = arrDataText.toLowerCase().indexOf(`${topic}`.toLowerCase(), pos + 1);
+    }
+    count.push(countTitle);
+  }
+  return { getAnalyticsData, count }
 }
 
 export {
@@ -64,7 +81,8 @@ export {
   currentMonth,
   getDaysWeek,
   changeImageItem,
-  changeAuthorItem
+  changeAuthorItem,
+  dataAnalytics
 }
 
 
