@@ -1,9 +1,10 @@
 import styles from "../../styles/NewsResult.module.css"
 import Link from "next/link";
+import classNames from 'classnames';
 
 
 const ResultHeader = () => (
-    <div className={`${styles.header} container`}>
+    <div className={classNames(styles.header, "container")}>
         <div className={styles.leftPart}>
             <h1 className={styles.title}>Результаты поиска</h1>
         </div>

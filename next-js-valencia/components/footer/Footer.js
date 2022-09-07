@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image"
 import gitIcon from "../../public/img/iconGit.png"
 import facebookIcon from "../../public/img/iconFacebook.png"
-
+import classNames from 'classnames';
 
 const footerNav = [
     { id: 1, title: "Главная", path: "/" },
@@ -16,7 +16,7 @@ const socialNav = [
 ]
 const Footer = () => {
     return (
-        <div className={`${styles.footer} container`}>
+        <div className={classNames(styles.footer, "container")}>
             <div className={styles.copyright}>
                 © 2022  Supersite
             </div>

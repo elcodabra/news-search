@@ -2,7 +2,7 @@ import styles from "../../styles/Header.module.css"
 import { gettingNews } from "../../pages/api/api";
 import { useState, useEffect } from "react";
 import { getInputValue } from "../../pages/api/api";
-
+import classNames from 'classnames';
 
 const Search = ({
     loader,
@@ -36,7 +36,7 @@ const Search = ({
         })
     }
     return (
-        <div className={`${styles.search} container`} >
+        <div className={classNames(styles.search, "container")} >
             <h1 className={styles.title} >
                 Что в мире творится?
             </h1>

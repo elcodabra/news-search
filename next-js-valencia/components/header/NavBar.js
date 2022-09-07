@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
 import Link from "next/link";
 import styles from "../../styles/Header.module.css"
-
+import classNames from 'classnames';
 
 
 const navigation = [
@@ -15,7 +15,7 @@ const NavBar = () => {
     const stylesLinkChanges = (pathName === "/about-project") ? styles.activeLinkAboutPr : null;
     const stylesActiveChanges = (pathName === "/about-project") ? styles.activeAbout : null;
     return (
-        <div className={`${styles.nav} container`}>
+        <div className={classNames(styles.nav, "container")}>
             <div className={styles.leftPart}>
                 <Link href="/"><a className={stylesLogo} >NewsAnalyzer</a></Link>
             </div>

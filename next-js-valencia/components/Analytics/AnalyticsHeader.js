@@ -1,7 +1,7 @@
 import styles from "../../styles/Analytics.module.css"
 import Link from "next/link";
 import { useState, useEffect } from "react";
-
+import classNames from 'classnames';
 
 const AnalyticsHeader = ({ topic, totalCount, totalRes }) => {
   const [totalChanges, setTotalChanges] = useState("")
@@ -19,7 +19,7 @@ const AnalyticsHeader = ({ topic, totalCount, totalRes }) => {
     }
   }, [totalRes])
   return (
-    <div className={`${styles.header} container`} >
+    <div className={classNames(styles.header, "container")} >
       <div className={styles.breadCrumbs}>
         <Link href="/"><a className={styles.link} >Главная</a></Link>
         <span className={styles.currentPage} > / Аналитика</span>

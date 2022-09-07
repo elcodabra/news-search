@@ -1,5 +1,5 @@
 
-let apiKey = "1bb2c66fe49f4cc8aae2c07724edd0bd";
+let apiKey = "53dda3d904814c45bfe91ca26f3c68ff";
 let topic = [];
 export const getInputValue = (newsTopic) => {
   topic.push(newsTopic);
@@ -13,7 +13,7 @@ const gettingNews = async (e) => {
   let topicItem = topic.pop()
   const url = `https://nomoreparties.co/news/v2/everything?q=${topicItem}&from=${arrDateItem[6]}&to=${arrDateItem[0]}&sortBy=publishedAt&pageSize=100&apiKey=${apiKey}`;
   let arrUrlItem = [];
-  for (let i = 6; i >= 0; i--) {
+  for (let i = 1; i >= 0; i--) {
     let urlDay = `https://nomoreparties.co/news/v2/everything?q=${topicItem}&from=${arrDateItem[i]}&to=${arrDateItem[i]}&sortBy=publishedAt&pageSize=100&apiKey=${apiKey}`;
     arrUrlItem.push(urlDay)
   }

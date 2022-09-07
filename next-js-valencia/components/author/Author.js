@@ -1,7 +1,8 @@
 import styles from "../../styles/Author.module.css"
+import classNames from 'classnames';
 
 const Author = () => (
-    <div className={`${styles.content} container`}>
+    <div className={classNames(styles.content, "container")}>
         <div className={styles.leftPart}>
             <div className={styles.img}></div>
         </div>

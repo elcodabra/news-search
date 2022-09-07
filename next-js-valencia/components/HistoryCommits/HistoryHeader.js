@@ -1,11 +1,11 @@
 
 import styles from "../../styles/HistoryCommits.module.css"
 import Link from "next/link";
-
+import classNames from 'classnames';
 
 const HistoryHeader = () => {
   return (
-    <div className={`${styles.header} container`}>
+    <div className={classNames(styles.header, "container")}>
       <div className={styles.leftPart}>
         <h1 className={styles.headline}>История коммитов из GitHub</h1>
       </div>

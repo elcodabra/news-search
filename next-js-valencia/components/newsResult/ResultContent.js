@@ -2,7 +2,7 @@ import styles from "../../styles/NewsResult.module.css"
 import ResultContentItem from "./ResultContentItem";
 import { useState, useEffect } from "react";
 import { changeDate } from "../../app/main"
-
+import classNames from 'classnames';
 
 
 
@@ -53,7 +53,7 @@ const showBtn = () => {
 const ResultContent = () => {
     const { itemsResult, setResult, dataObjNews } = useItem();
     return (
-        <div className={`${styles.content} container`}>
+        <div className={classNames(styles.content, "container")}>
             {itemsResult.map((item, i) => (
                 <ResultContentItem
                     key={i}

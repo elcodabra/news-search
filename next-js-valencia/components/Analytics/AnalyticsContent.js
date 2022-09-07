@@ -1,11 +1,12 @@
 import styles from "../../styles/Analytics.module.css"
 import ProgressBar from './AnalyticsProBar';
 import { currentMonth } from "../../app/main";
+import classNames from 'classnames';
 
 const AnalyticsContent = ({ itemNum }) => {
   return (
     <div className={styles.background}>
-      <div className={`container`}>
+      <div className={classNames("container")}>
         <h1 className={styles.headline}>Аналитика по дням</h1>
         <div className={styles.nav}>
           <div className={`${styles.date} ${styles.textStyle}`}>
