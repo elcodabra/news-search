@@ -2,8 +2,6 @@ import styles from "../../styles/Loader.module.css"
 
 
 const Loader = () => {
-
-  
   return(
     <div className = {styles.loader} >
         <div className = {styles.circle}></div>
@@ -12,8 +10,5 @@ const Loader = () => {
        </div>
     </div>
   )
-
 }
-
-
 export default Loader ;
