@@ -27,11 +27,9 @@ function MyApp({ Component, pageProps }) {
 
   );
 
-  return <Layout
-    loader={loader}
-    noNewsFound={noNewsFound}
-    searchResult={searchResult}
-  >
+  const headerProps = [loader,noNewsFound,searchResult];
+
+  return <Layout headerProps={headerProps} >
     <Component
       {...pageProps}
       loader={preloader}

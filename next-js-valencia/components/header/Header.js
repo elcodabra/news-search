@@ -6,9 +6,7 @@ import { useRouter } from "next/router"
 import { useState, useEffect } from "react";
 
 const Header = ({
-  loader,
-  noNewsFound,
-  searchResult,
+  headerProps,
 }) => {
   const [search, setSearch] = useState(true);
   const pathName = useRouter().asPath;
@@ -24,11 +22,7 @@ const Header = ({
       <NavBar />
       <hr className={styles.line} />
       {search && (
-        <Search
-          loader={loader}
-          noNewsFound={noNewsFound}
-          searchResult={searchResult}
-        />
+        <Search  headerProps={headerProps}/>
       )}
     </div>
   )

@@ -4,17 +4,11 @@ import Header from "../header/Header";
 
 const Layout = ({
     children,
-    loader,
-    noNewsFound,
-    searchResult,
+    headerProps
 }) => {
     return (
         <div>
-            <Header
-                loader={loader}
-                noNewsFound={noNewsFound}
-                searchResult={searchResult}
-            />
+            <Header headerProps={headerProps} />
             {children}
             <Footer />
         </div>

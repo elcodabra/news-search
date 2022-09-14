@@ -3,7 +3,6 @@ const changeDate = (arrayDate) => {
   let changeDate = new Date(dateNews).toLocaleDateString('ru', { year: 'numeric', month: 'long', day: 'numeric' }).slice(0, -3);
   let strDateMonth = changeDate.split(" ");
   let currentDate = changeDate.replace(strDateMonth[1], strDateMonth[1] + ",");
-
   return currentDate
 }
 
@@ -11,7 +10,6 @@ const currentMonth = () => {
   let date = new Date()
   date.getMonth()
   let currentDateMonth = new Date(date).toLocaleDateString('ru', { month: 'long', });
-
   return currentDateMonth
 }
 
@@ -26,7 +24,6 @@ const getDaysWeek = () => {
     let str = tempDate.getDate() + ", " + days[tempDate.getDay()];
     item.push(str);
   }
-
   return item
 }
 
@@ -45,7 +42,6 @@ const changeImageItem = (image, changeImg) => {
     }
     checkImgSrc(image)
   }
-
   return image
 }
 
@@ -53,13 +49,15 @@ const changeAuthorItem = (author, changeAuthor) => {
   if (author === null || author === "") {
     changeAuthor("Автор не указан")
   }
-
   return author
 }
 
 function dataAnalytics() {
   let count = [];
   function getAnalyticsData(arr, topic) {
+    if (arr === null) {
+      return
+    }
     let arrData = [];
     arr.forEach(el => {
       arrData.push(el.title);

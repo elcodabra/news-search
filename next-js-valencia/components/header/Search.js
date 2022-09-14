@@ -5,10 +5,11 @@ import { getInputValue } from "../../pages/api/api";
 import classNames from 'classnames';
 
 const Search = ({
-    loader,
-    noNewsFound,
-    searchResult,
+    headerProps
 }) => {
+    let loader = headerProps[0];
+    let noNewsFound = headerProps[1];
+    let searchResult = headerProps[2];
     const [topic, setTopic] = useState('');
     getInputValue(topic);
     const searchNews = (e) => {

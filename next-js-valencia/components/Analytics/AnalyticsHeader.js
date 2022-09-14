@@ -1,23 +1,24 @@
-import styles from "../../styles/Analytics.module.css"
+import styles from "../../styles/Analytics.module.css";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import classNames from 'classnames';
 
 const AnalyticsHeader = ({ topic, totalCount, totalRes }) => {
-  const [totalChanges, setTotalChanges] = useState("")
-  let totalLength = totalRes.toString().length;
+  const [totalChanges, setTotalChanges] = useState("");
+  let countResult = totalRes.toString();
+  let totalLength = countResult.length;
 
   useEffect(() => {
     if (totalLength > 4) {
-      let stringCount = totalRes.toString().slice(0, 2) + " " + totalRes.toString().slice(2, 5);
-      setTotalChanges(stringCount)
+      let stringCount = countResult.slice(0, 2) + " " + countResult.slice(2, 5);
+      setTotalChanges(stringCount);
     } else if (totalLength == 4) {
-      let stringCount = totalRes.toString().slice(0, 1) + " " + totalRes.toString().slice(1, 5);
-      setTotalChanges(stringCount)
+      let stringCount = countResult.slice(0, 1) + " " + countResult.slice(1, 5);
+      setTotalChanges(stringCount);
     } else {
-      setTotalChanges(totalRes)
+      setTotalChanges(totalRes);
     }
-  }, [totalRes])
+  }, [totalRes]);
   return (
     <div className={classNames(styles.header, "container")} >
       <div className={styles.breadCrumbs}>
