@@ -1,17 +1,14 @@
-import Footer from "../footer/Footer";
-import Header from "../header/Header";
-
+import Footer from '../footer/Footer';
+import Header from '../header/Header';
 
 const Layout = ({
     children,
-    headerProps
-}) => {
-    return (
-        <div>
-            <Header headerProps={headerProps} />
-            {children}
-            <Footer />
-        </div>
-    )
-}
+    headerProps,
+}) => (
+    <div>
+        <Header headerProps={headerProps} />
+        {children}
+        <Footer />
+    </div>
+);
 export default Layout;

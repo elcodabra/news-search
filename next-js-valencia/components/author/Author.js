@@ -1,8 +1,8 @@
-import styles from "../../styles/Author.module.css"
 import classNames from 'classnames';
+import styles from '../../styles/Author.module.css';
 
 const Author = () => (
-    <div className={classNames(styles.content, "container")}>
+    <div className={classNames(styles.content, 'container')}>
         <div className={styles.leftPart}>
             <div className={styles.img}></div>
         </div>
@@ -16,5 +16,5 @@ const Author = () => (
             </p>
         </div>
     </div>
-)
+);
 export default Author;

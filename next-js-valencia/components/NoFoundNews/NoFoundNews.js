@@ -1,16 +1,13 @@
-import styles from "../../styles/NoFoundNews.module.css"
+import styles from '../../styles/NoFoundNews.module.css';
 
-
-const NoFoundNews = () => {
-  return (
+const NoFoundNews = () => (
     <div className={styles.wrapper} >
-      <div className={styles.img}></div>
-      <div className={styles.headline}>Ничего не найдено</div>
-      <div className={styles.text}>
+        <div className={styles.img}></div>
+        <div className={styles.headline}>Ничего не найдено</div>
+        <div className={styles.text}>
         К сожалению по вашему запросу
         ничего не найдено.
-      </div>
+        </div>
     </div>
-  )
-}
+);
 export default NoFoundNews;

@@ -3,14 +3,17 @@ module.exports = {
         "browser": true,
         "es2021": true
     },
-    "extends": "eslint:recommended",
-    "overrides": [
+    "extends": [
+        "airbnb/base",
+        "eslint:recommended",
+        "plugin:react/recommended",
+      	"next/core-web-vitals"
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "rules": {
-        "indent": ["error", 2]
+        "indent": ["error", 4]
     }
 }

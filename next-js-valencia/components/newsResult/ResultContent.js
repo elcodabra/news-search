@@ -1,59 +1,53 @@
-import styles from "../../styles/NewsResult.module.css"
-import ResultContentItem from "./ResultContentItem";
-import { useState, useEffect } from "react";
-import { changeDate } from "../../app/main"
+import { useState, useEffect } from 'react';
 import classNames from 'classnames';
-
-
-
+import styles from '../../styles/NewsResult.module.css';
+import ResultContentItem from './ResultContentItem';
+import { changeDate } from '../../app/main';
 
 const useItem = () => {
-    let dataObjNews = JSON.parse(localStorage.getItem("newsItem"));
-    let newsData = JSON.parse(localStorage.getItem("newsData"));
+    const dataObjNews = JSON.parse(localStorage.getItem('newsItem'));
+    const newsData = JSON.parse(localStorage.getItem('newsData'));
 
-    const [itemsResult, setItemsResult] = useState(newsData.map(item =>
-        <ResultContentItem />
-    ).slice(0, 3))
+    const [itemsResult, setItemsResult] = useState(newsData.map((item) => <ResultContentItem />).slice(0, 3));
 
     function removeItem() {
-        let total = 0
+        let total = 0;
         if (itemsResult.length > newsData.length) {
-            total = itemsResult.length - newsData.length
+            total = itemsResult.length - newsData.length;
         }
-        return total
+        return total;
     }
 
     function setResult() {
         setItemsResult([...itemsResult,
-        <ResultContentItem />,
-        <ResultContentItem />,
-        <ResultContentItem />
-        ])
+            <ResultContentItem />,
+            <ResultContentItem />,
+            <ResultContentItem />,
+        ]);
     }
 
     if (itemsResult.length > newsData.length || itemsResult.length === newsData.length) {
-        itemsResult.splice(removeItem(), removeItem())
-        hideBtn()
+        itemsResult.splice(removeItem(), removeItem());
+        hideBtn();
     } else {
-        showBtn()
+        showBtn();
     }
     return { itemsResult, setResult, dataObjNews };
-}
+};
 
-
-let classBtn = {
+const classBtn = {
     hideButton: '',
-}
+};
 const hideBtn = () => {
-    classBtn.hideButton = `${styles.hideBtn}`
-}
+    classBtn.hideButton = `${styles.hideBtn}`;
+};
 const showBtn = () => {
-    classBtn.hideButton = "";
-}
+    classBtn.hideButton = '';
+};
 const ResultContent = () => {
     const { itemsResult, setResult, dataObjNews } = useItem();
     return (
-        <div className={classNames(styles.content, "container")}>
+        <div className={classNames(styles.content, 'container')}>
             {itemsResult.map((item, i) => (
                 <ResultContentItem
                     key={i}
@@ -69,6 +63,6 @@ const ResultContent = () => {
                 <button className={`${styles.btn} ${classBtn.hideButton}`} onClick={setResult}>Показать еще</button>
             </div>
         </div>
-    )
-}
+    );
+};
 export default ResultContent;

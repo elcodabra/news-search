@@ -1,15 +1,14 @@
-import styles from "../../styles/Header.module.css"
-import { gettingNews } from "../../pages/api/api";
-import { useState, useEffect } from "react";
-import { getInputValue } from "../../pages/api/api";
+import { useState, useEffect } from 'react';
 import classNames from 'classnames';
+import styles from '../../styles/Header.module.css';
+import { gettingNews, getInputValue } from '../../pages/api/api';
 
 const Search = ({
-    headerProps
+    headerProps,
 }) => {
-    let loader = headerProps[0];
-    let noNewsFound = headerProps[1];
-    let searchResult = headerProps[2];
+    const loader = headerProps[0];
+    const noNewsFound = headerProps[1];
+    const searchResult = headerProps[2];
     const [topic, setTopic] = useState('');
     getInputValue(topic);
     const searchNews = (e) => {
@@ -17,13 +16,13 @@ const Search = ({
         noNewsFound(false);
         if (topic.length === 0) {
             searchResult(false);
-            alert("«Нужно ввести ключевое слово»");
+            alert('«Нужно ввести ключевое слово»');
             return;
-        } else if (setTopic(topic) != topic) {
+        } if (setTopic(topic) != topic) {
             searchResult(false);
         }
-        loader(true)
-        gettingNews().then(function (item) {
+        loader(true);
+        gettingNews().then((item) => {
             if (item.length === 0) {
                 loader(false);
                 noNewsFound(true);
@@ -32,12 +31,12 @@ const Search = ({
                 searchResult(true);
             }
         }).catch((error) => {
-            alert("«Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз»");
+            alert('«Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз»');
             loader(false);
-        })
-    }
+        });
+    };
     return (
-        <div className={classNames(styles.search, "container")} >
+        <div className={classNames(styles.search, 'container')} >
             <h1 className={styles.title} >
                 Что в мире творится?
             </h1>
@@ -45,12 +44,12 @@ const Search = ({
                 Введите в поиске любую тему и узнайте, насколько популярной она была в носотях за прошедшую неделю.
             </p>
             <form className={styles.form}>
-                <div className={styles.wrapperInput}  >
-                    <input className={styles.input} onChange={event => setTopic(event.target.value)} type="text" placeholder="Введите тему новости"></input>
+                <div className={styles.wrapperInput} >
+                    <input className={styles.input} onChange={(event) => setTopic(event.target.value)} type="text" placeholder="Введите тему новости"></input>
                     <input className={styles.btn} type="submit" onClick={searchNews} value="Искать"></input>
                 </div>
             </form>
         </div>
-    )
-}
+    );
+};
 export default Search;

@@ -1,13 +1,11 @@
-import HistoryHeader from "./HistoryHeader";
-import styles from "../../styles/HistoryCommits.module.css"
-import HistoryCarousel from "./HistoryCarousel";
+import HistoryHeader from './HistoryHeader';
+import styles from '../../styles/HistoryCommits.module.css';
+import HistoryCarousel from './HistoryCarousel';
 
-const HistoryCommits = () => {
-  return (
+const HistoryCommits = () => (
     <div className={styles.commitsWrapper}>
-      <HistoryHeader />
-      <HistoryCarousel />
+        <HistoryHeader />
+        <HistoryCarousel />
     </div>
-  )
-}
+);
 export default HistoryCommits;

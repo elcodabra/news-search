@@ -1,21 +1,20 @@
-import { useRouter } from "next/router"
-import Link from "next/link";
-import styles from "../../styles/Header.module.css"
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 import classNames from 'classnames';
-
+import styles from '../../styles/Header.module.css';
 
 const navigation = [
-    { id: 1, title: "Главная", path: "/" },
-    { id: 2, title: "О проекте", path: "/about-project" }
-]
+    { id: 1, title: 'Главная', path: '/' },
+    { id: 2, title: 'О проекте', path: '/about-project' },
+];
 const NavBar = () => {
     const pathName = useRouter().asPath;
-    const stylesLogo = (pathName === "/") ? styles.logoChanges : styles.logo;
-    const stylesHover = (pathName === "/analytics") ? styles.analyticHover : null;
-    const stylesLinkChanges = (pathName === "/about-project") ? styles.activeLinkAboutPr : null;
-    const stylesActiveChanges = (pathName === "/about-project") ? styles.activeAbout : null;
+    const stylesLogo = (pathName === '/') ? styles.logoChanges : styles.logo;
+    const stylesHover = (pathName === '/analytics') ? styles.analyticHover : null;
+    const stylesLinkChanges = (pathName === '/about-project') ? styles.activeLinkAboutPr : null;
+    const stylesActiveChanges = (pathName === '/about-project') ? styles.activeAbout : null;
     return (
-        <div className={classNames(styles.nav, "container")}>
+        <div className={classNames(styles.nav, 'container')}>
             <div className={styles.leftPart}>
                 <Link href="/"><a className={stylesLogo} >NewsAnalyzer</a></Link>
             </div>
@@ -34,6 +33,6 @@ const NavBar = () => {
                 </nav>
             </div>
         </div>
-    )
-}
+    );
+};
 export default NavBar;
