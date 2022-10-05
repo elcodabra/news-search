@@ -9,27 +9,27 @@ import { setting } from './SettingsSlider';
 import { changeDate } from '../../app/main';
 
 const HistoryCarousel = () => {
-    const [itemCommits, setItemCommits] = useState([]);
-    useEffect(() => {
-        const dataCommits = JSON.parse(localStorage.getItem('commitsItem'));
-        setItemCommits(dataCommits);
-    }, []);
-    return (
-        <div >
-            <Slider {...setting()} className={styles.historySlider}>
-                {itemCommits.map((item, index) => (
-                    <HistoryCarouselItem
-                        key={index}
-                        date={changeDate(item.commit.author.date)}
-                        name={item.commit.author.name}
-                        email={item.commit.author.email}
-                        message={item.commit.message}
-                        itemUrl={item.html_url}
-                        imgUrl={item.author.avatar_url}
-                    />
-                ))}
-            </Slider>
-        </div>
-    );
+  const [itemCommits, setItemCommits] = useState([]);
+  useEffect(() => {
+    const dataCommits = JSON.parse(localStorage.getItem('commitsItem'));
+    setItemCommits(dataCommits);
+  }, []);
+  return (
+    <div >
+      <Slider {...setting()} className={styles.historySlider}>
+        {itemCommits.map((item, index) => (
+          <HistoryCarouselItem
+            key={index}
+            date={changeDate(item.commit.author.date)}
+            name={item.commit.author.name}
+            email={item.commit.author.email}
+            message={item.commit.message}
+            itemUrl={item.html_url}
+            imgUrl={item.author.avatar_url}
+          />
+        ))}
+      </Slider>
+    </div>
+  );
 };
 export default HistoryCarousel;
