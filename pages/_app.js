@@ -1,33 +1,23 @@
-import '../styles/globals.css'
-import Layout from '../components/layout/Layout'
-import { useState, useCallback } from "react";
+import '../styles/globals.css';
+import { useState, useCallback } from 'react';
+import Layout from '../components/layout/Layout';
 
 function MyApp({ Component, pageProps }) {
-
   const [preloader, setPreloader] = useState(false);
   const [noFound, setNoFound] = useState(false);
   const [result, setResult] = useState(false);
 
-  const loader = useCallback(
-    (param) => {
-      setPreloader(param);
-    }, [preloader],
+  const loader = useCallback((param) => {
+    setPreloader(param);
+  }, [preloader]);
+  const noNewsFound = useCallback((param) => {
+    setNoFound(param);
+  }, [noFound]);
+  const searchResult = useCallback((param) => {
+    setResult(param);
+  }, [result]);
 
-  );
-  const noNewsFound = useCallback(
-    (param) => {
-      setNoFound(param);
-    }, [noFound],
-
-  );
-  const searchResult = useCallback(
-    (param) => {
-      setResult(param);
-    }, [result],
-
-  );
-
-  const headerProps = [loader,noNewsFound,searchResult];
+  const headerProps = [loader, noNewsFound, searchResult];
 
   return <Layout headerProps={headerProps} >
     <Component
@@ -36,9 +26,7 @@ function MyApp({ Component, pageProps }) {
       noFound={noFound}
       result={result}
     />
-  </Layout>
-
-
+  </Layout>;
 }
 
-export default MyApp
+export default MyApp;
