@@ -9,25 +9,31 @@ const navigation = [
 ];
 const NavBar = () => {
   const pathName = useRouter().asPath;
-  const stylesLogo = (pathName === '/') ? styles.logoChanges : styles.logo;
-  const stylesHover = (pathName === '/analytics') ? styles.analyticHover : null;
-  const stylesLinkChanges = (pathName === '/about-project') ? styles.activeLinkAboutPr : null;
-  const stylesActiveChanges = (pathName === '/about-project') ? styles.activeAbout : null;
+  const stylesLogo = pathName === '/' ? styles.logoChanges : styles.logo;
+  const stylesHover = pathName === '/analytics' ? styles.analyticHover : null;
+  const stylesLinkChanges = pathName === '/about-project' ? styles.activeLinkAboutPr : null;
+  const stylesActiveChanges = pathName === '/about-project' ? styles.activeAbout : null;
   return (
     <div className={classNames(styles.nav, 'container')}>
       <div className={styles.leftPart}>
-        <Link href="/"><a className={stylesLogo} >NewsAnalyzer</a></Link>
+        <Link href="/">
+          <a className={stylesLogo}>NewsAnalyzer</a>
+        </Link>
       </div>
       <div className={styles.rightPart}>
         <nav className={styles.links}>
           {navigation.map(({ id, title, path }) => (
             <Link href={path} key={id}>
-              <a className={`${styles.link} ${stylesHover}
+              <a
+                className={`${styles.link} ${stylesHover}
                          ${pathName == path ? styles.active : null}
                          ${pathName == path ? styles.activeLinkHome : null}
                          ${pathName == path ? stylesLinkChanges : null}
                          ${pathName == path ? stylesActiveChanges : null}
-                         `} >{title}</a>
+                         `}
+              >
+                {title}
+              </a>
             </Link>
           ))}
         </nav>

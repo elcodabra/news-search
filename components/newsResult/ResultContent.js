@@ -8,7 +8,9 @@ const useItem = () => {
   const dataObjNews = JSON.parse(localStorage.getItem('newsItem'));
   const newsData = JSON.parse(localStorage.getItem('newsData'));
 
-  const [itemsResult, setItemsResult] = useState(newsData.map((item) => <ResultContentItem />).slice(0, 3));
+  const [itemsResult, setItemsResult] = useState(
+    newsData.map((item) => <ResultContentItem />).slice(0, 3),
+  );
 
   function removeItem() {
     let total = 0;
@@ -19,14 +21,18 @@ const useItem = () => {
   }
 
   function setResult() {
-    setItemsResult([...itemsResult,
+    setItemsResult([
+      ...itemsResult,
       <ResultContentItem />,
       <ResultContentItem />,
       <ResultContentItem />,
     ]);
   }
 
-  if (itemsResult.length > newsData.length || itemsResult.length === newsData.length) {
+  if (
+    itemsResult.length > newsData.length
+    || itemsResult.length === newsData.length
+  ) {
     itemsResult.splice(removeItem(), removeItem());
     hideBtn();
   } else {
@@ -60,7 +66,12 @@ const ResultContent = () => {
         />
       ))}
       <div className={styles.showMore}>
-        <button className={`${styles.btn} ${classBtn.hideButton}`} onClick={setResult}>Показать еще</button>
+        <button
+          className={`${styles.btn} ${classBtn.hideButton}`}
+          onClick={setResult}
+        >
+          Показать еще
+        </button>
       </div>
     </div>
   );

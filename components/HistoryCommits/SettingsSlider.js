@@ -13,7 +13,8 @@ function SampleNextArrow(props) {
         height: '40px',
         display: 'block',
         borderRadius: '100%',
-        background: "url('https://cdn1.iconfinder.com/data/icons/ionicons-sharp-vol-1/512/chevron-forward-circle-sharp-128.png')",
+        background:
+          "url('https://cdn1.iconfinder.com/data/icons/ionicons-sharp-vol-1/512/chevron-forward-circle-sharp-128.png')",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
@@ -37,7 +38,8 @@ function SamplePrevArrow(props) {
         height: '40px',
         display: 'block',
         borderRadius: '100%',
-        background: "url('https://cdn1.iconfinder.com/data/icons/ionicons-sharp-vol-1/512/chevron-back-circle-sharp-128.png')",
+        background:
+          "url('https://cdn1.iconfinder.com/data/icons/ionicons-sharp-vol-1/512/chevron-back-circle-sharp-128.png')",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
@@ -54,43 +56,41 @@ const setting = () => {
     slidesToScroll: 4,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    responsive: [{
-      breakpoint: 1440,
-      settings: {
-        arrows: false,
-        centerPadding: '20px',
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: false,
-        dots: true,
+    responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          arrows: false,
+          centerPadding: '20px',
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: false,
+          dots: true,
+        },
       },
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        arrows: false,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: false,
-        dots: false,
+      {
+        breakpoint: 1024,
+        settings: {
+          arrows: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: false,
+          dots: false,
+        },
       },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerPadding: '0px',
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-        dots: false,
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerPadding: '0px',
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: false,
+        },
       },
-    },
-
     ],
   };
   return settings;
 };
-export {
-  setting,
-};
+export { setting };

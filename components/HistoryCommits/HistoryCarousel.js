@@ -15,7 +15,7 @@ const HistoryCarousel = () => {
     setItemCommits(dataCommits);
   }, []);
   return (
-    <div >
+    <div>
       <Slider {...setting()} className={styles.historySlider}>
         {itemCommits.map((item, index) => (
           <HistoryCarouselItem

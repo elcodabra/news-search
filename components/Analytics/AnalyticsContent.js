@@ -9,11 +9,13 @@ const AnalyticsContent = ({ itemNum }) => (
       <h1 className={styles.headline}>Аналитика по дням</h1>
       <div className={styles.nav}>
         <div className={`${styles.date} ${styles.textStyle}`}>
-            Дата
-          <p className={`${styles.dateItem} ${styles.textStyle}`}>({currentMonth()})</p>
+          Дата
+          <p className={`${styles.dateItem} ${styles.textStyle}`}>
+            ({currentMonth()})
+          </p>
         </div>
         <div className={`${styles.navHeadline} ${styles.textStyle}`}>
-            Кол-во упоминаний
+          Кол-во упоминаний
         </div>
       </div>
       <ProgressBar itemNum={itemNum} />

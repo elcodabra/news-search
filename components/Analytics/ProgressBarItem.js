@@ -5,7 +5,11 @@ const ProgressBarItem = ({ dateItem, itemNum }) => (
     <div className={styles.item}>
       <div className={styles.itemDate}>{dateItem}</div>
       <div className={styles.itemCounterWrapper}>
-        <progress className={styles.itemValue} value={itemNum} max="100"></progress>
+        <progress
+          className={styles.itemValue}
+          value={itemNum}
+          max="100"
+        ></progress>
         <div className={styles.itemCounter}>{itemNum}</div>
       </div>
     </div>

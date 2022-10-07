@@ -8,7 +8,9 @@ const HistoryHeader = () => (
       <h1 className={styles.headline}>История коммитов из GitHub</h1>
     </div>
     <div className={styles.rightPart}>
-      <Link href="https://github.com/M-skyi"><a className={styles.link}>Открыть в  Github</a></Link>
+      <Link href="https://github.com/M-skyi">
+        <a className={styles.link}>Открыть в Github</a>
+      </Link>
     </div>
   </div>
 );

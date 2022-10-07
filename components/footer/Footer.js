@@ -12,21 +12,29 @@ const footerNav = [
 ];
 const socialNav = [
   { id: 1, path: 'https://github.com/M-skyi', src: gitIcon },
-  { id: 2, path: 'https://www.facebook.com/profile.php?id=100006967621155', src: facebookIcon },
+  {
+    id: 2,
+    path: 'https://www.facebook.com/profile.php?id=100006967621155',
+    src: facebookIcon,
+  },
 ];
 const Footer = () => (
   <div className={classNames(styles.footer, 'container')}>
-    <div className={styles.copyright}>
-                © 2022  Supersite
-    </div>
+    <div className={styles.copyright}>© 2022 Supersite</div>
     <nav className={styles.nav}>
       {footerNav.map(({ id, title, path }) => (
-        <Link href={path} key={id}><a className={styles.navItem}>{title}</a></Link>
+        <Link href={path} key={id}>
+          <a className={styles.navItem}>{title}</a>
+        </Link>
       ))}
     </nav>
     <div className={styles.social}>
       {socialNav.map(({ id, src, path }) => (
-        <Link key={id} href={path}><a className={styles.socialItem}><Image src={src} /></a></Link>
+        <Link key={id} href={path}>
+          <a className={styles.socialItem}>
+            <Image src={src} />
+          </a>
+        </Link>
       ))}
     </div>
   </div>

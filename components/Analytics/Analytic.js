@@ -24,10 +24,14 @@ const Analytic = () => {
   }
 
   let x = 0;
-  const countHeadlines = count.map((i) => x += i, x).reverse()[0];
+  const countHeadlines = count.map((i) => (x += i), x).reverse()[0];
   return (
     <div>
-      <AnalyticsHeader topic={topicRequest} totalCount={countHeadlines} totalRes={totalResults} />
+      <AnalyticsHeader
+        topic={topicRequest}
+        totalCount={countHeadlines}
+        totalRes={totalResults}
+      />
       <AnalyticsContent itemNum={count} />
     </div>
   );

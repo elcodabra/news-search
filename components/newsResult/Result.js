@@ -3,7 +3,7 @@ import ResultHeader from './ResultHeader';
 import styles from '../../styles/NewsResult.module.css';
 
 const Result = () => (
-  <div className={styles.background} >
+  <div className={styles.background}>
     <ResultHeader />
     <ResultContent />
   </div>

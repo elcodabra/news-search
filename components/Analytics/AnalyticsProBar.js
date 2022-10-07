@@ -13,18 +13,16 @@ const ProgressBar = ({ itemNum }) => {
 
   return (
     <div className={styles.progressBar}>
-      {
-        percentItem().map((num, i) => (
-          <span key={i} className={styles.percent}>{`${num}`}</span>
-        ))}
+      {percentItem().map((num, i) => (
+        <span key={i} className={styles.percent}>{`${num}`}</span>
+      ))}
       {getDaysWeek().map((item, i) => (
         <ProgressBarItem key={i} dateItem={item} itemNum={itemNum[i]} />
       ))}
-      {
-        percentItem().map((num, i) => (
-          <span key={i} className={styles.percent}>{`${num}`}</span>
-        ))}
-    </div >
+      {percentItem().map((num, i) => (
+        <span key={i} className={styles.percent}>{`${num}`}</span>
+      ))}
+    </div>
   );
 };
 export default ProgressBar;

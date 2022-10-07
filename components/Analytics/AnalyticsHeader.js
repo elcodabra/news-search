@@ -10,20 +10,28 @@ const AnalyticsHeader = ({ topic, totalCount, totalRes }) => {
 
   useEffect(() => {
     if (totalLength > 4) {
-      const stringCount = `${countResult.slice(0, 2)} ${countResult.slice(2, 5)}`;
+      const stringCount = `${countResult.slice(0, 2)} ${countResult.slice(
+        2,
+        5,
+      )}`;
       setTotalChanges(stringCount);
     } else if (totalLength == 4) {
-      const stringCount = `${countResult.slice(0, 1)} ${countResult.slice(1, 5)}`;
+      const stringCount = `${countResult.slice(0, 1)} ${countResult.slice(
+        1,
+        5,
+      )}`;
       setTotalChanges(stringCount);
     } else {
       setTotalChanges(totalRes);
     }
   }, [totalRes]);
   return (
-    <div className={classNames(styles.header, 'container')} >
+    <div className={classNames(styles.header, 'container')}>
       <div className={styles.breadCrumbs}>
-        <Link href="/"><a className={styles.link} >Главная</a></Link>
-        <span className={styles.currentPage} > / Аналитика</span>
+        <Link href="/">
+          <a className={styles.link}>Главная</a>
+        </Link>
+        <span className={styles.currentPage}> / Аналитика</span>
       </div>
       <div className={styles.requestNews}>
         <p className={styles.requestTopic}>
@@ -39,7 +47,8 @@ const AnalyticsHeader = ({ topic, totalCount, totalRes }) => {
             Упоминаний в загаловках:
             <span className={styles.requestDataItem}> {totalCount}</span>
           </p>
-        </div> </div>
+        </div>{' '}
+      </div>
     </div>
   );
 };
