@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import classNames from 'classnames';
 import styles from '../../styles/NewsResult.module.css';
 import ResultContentItem from './ResultContentItem';
@@ -9,7 +9,7 @@ const useItem = () => {
   const newsData = JSON.parse(localStorage.getItem('newsData'));
 
   const [itemsResult, setItemsResult] = useState(
-    newsData.map((item) => <ResultContentItem />).slice(0, 3),
+    newsData.map((item) => <ResultContentItem key={item} />).slice(0, 3),
   );
 
   function removeItem() {
@@ -23,11 +23,20 @@ const useItem = () => {
   function setResult() {
     setItemsResult([
       ...itemsResult,
-      <ResultContentItem />,
-      <ResultContentItem />,
-      <ResultContentItem />,
+      ...newsData.map((item) => <ResultContentItem key={item} />).slice(0, 3),
+
     ]);
   }
+
+  const classBtn = {
+    hideButton: '',
+  };
+  const hideBtn = () => {
+    classBtn.hideButton = `${styles.hideBtn}`;
+  };
+  const showBtn = () => {
+    classBtn.hideButton = '';
+  };
 
   if (
     itemsResult.length > newsData.length
@@ -38,20 +47,16 @@ const useItem = () => {
   } else {
     showBtn();
   }
-  return { itemsResult, setResult, dataObjNews };
+
+  return {
+    itemsResult, setResult, dataObjNews, classBtn,
+  };
 };
 
-const classBtn = {
-  hideButton: '',
-};
-const hideBtn = () => {
-  classBtn.hideButton = `${styles.hideBtn}`;
-};
-const showBtn = () => {
-  classBtn.hideButton = '';
-};
 const ResultContent = () => {
-  const { itemsResult, setResult, dataObjNews } = useItem();
+  const {
+    itemsResult, setResult, dataObjNews, classBtn,
+  } = useItem();
   return (
     <div className={classNames(styles.content, 'container')}>
       {itemsResult.map((item, i) => (

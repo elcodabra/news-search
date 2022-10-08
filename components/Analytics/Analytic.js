@@ -19,12 +19,18 @@ const Analytic = () => {
 
   const { count, getAnalyticsData } = dataAnalytics();
 
-  for (let i = 0; i < analyticsDay.length; i++) {
+  for (let i = 0; i < analyticsDay.length; i += 1) {
     getAnalyticsData(analyticsDay[i], topicRequest);
   }
 
-  let x = 0;
-  const countHeadlines = count.map((i) => (x += i), x).reverse()[0];
+  function countHeadlines() {
+    let sum = 0;
+    for (let i = 0; i < count.length; i += 1) {
+      sum += count[i];
+    }
+    return sum;
+  }
+
   return (
     <div>
       <AnalyticsHeader

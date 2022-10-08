@@ -9,13 +9,13 @@ function MyApp({ Component, pageProps }) {
 
   const loader = useCallback((param) => {
     setPreloader(param);
-  }, [preloader]);
+  }, []);
   const noNewsFound = useCallback((param) => {
     setNoFound(param);
-  }, [noFound]);
+  }, []);
   const searchResult = useCallback((param) => {
     setResult(param);
-  }, [result]);
+  }, []);
 
   const headerProps = [loader, noNewsFound, searchResult];
 

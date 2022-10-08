@@ -93,4 +93,4 @@ const setting = () => {
   };
   return settings;
 };
-export { setting };
+export default setting;

@@ -26,10 +26,10 @@ const NavBar = () => {
             <Link href={path} key={id}>
               <a
                 className={`${styles.link} ${stylesHover}
-                         ${pathName == path ? styles.active : null}
-                         ${pathName == path ? styles.activeLinkHome : null}
-                         ${pathName == path ? stylesLinkChanges : null}
-                         ${pathName == path ? stylesActiveChanges : null}
+                         ${pathName === path ? styles.active : null}
+                         ${pathName === path ? styles.activeLinkHome : null}
+                         ${pathName === path ? stylesLinkChanges : null}
+                         ${pathName === path ? stylesActiveChanges : null}
                          `}
               >
                 {title}

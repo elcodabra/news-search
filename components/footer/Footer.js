@@ -32,7 +32,7 @@ const Footer = () => (
       {socialNav.map(({ id, src, path }) => (
         <Link key={id} href={path}>
           <a className={styles.socialItem}>
-            <Image src={src} />
+            <Image src={src} alt='Social Icon'/>
           </a>
         </Link>
       ))}

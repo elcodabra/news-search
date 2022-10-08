@@ -3,15 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  plugins: [
-    'css-modules',
-  ],
   extends: [
     'airbnb/base',
     'eslint:recommended',
     'plugin:react/recommended',
-      	'next/core-web-vitals',
-    'plugin:css-modules/recommended',
+    'next/core-web-vitals',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -19,7 +15,6 @@ module.exports = {
   },
   rules: {
     indent: ['error', 2],
-    'css-modules/no-unused-class': [2, { camelCase: true }],
-    'css-modules/no-undef-class': [2, { camelCase: true }],
+    'no-shadow': 'off',
   },
 };

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import classNames from 'classnames';
 import styles from '../../styles/Header.module.css';
 import { gettingNews, getInputValue } from '../../pages/api/api';
@@ -17,7 +17,7 @@ const Search = ({ headerProps }) => {
       alert('«Нужно ввести ключевое слово»');
       return;
     }
-    if (setTopic(topic) != topic) {
+    if (setTopic(topic) !== topic) {
       searchResult(false);
     }
     loader(true);
@@ -31,7 +31,7 @@ const Search = ({ headerProps }) => {
           searchResult(true);
         }
       })
-      .catch((error) => {
+      .catch(() => {
         alert(
           '«Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз»',
         );

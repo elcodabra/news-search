@@ -15,7 +15,7 @@ const AnalyticsHeader = ({ topic, totalCount, totalRes }) => {
         5,
       )}`;
       setTotalChanges(stringCount);
-    } else if (totalLength == 4) {
+    } else if (totalLength === 4) {
       const stringCount = `${countResult.slice(0, 1)} ${countResult.slice(
         1,
         5,
@@ -24,7 +24,7 @@ const AnalyticsHeader = ({ topic, totalCount, totalRes }) => {
     } else {
       setTotalChanges(totalRes);
     }
-  }, [totalRes]);
+  }, [totalRes, totalLength, countResult]);
   return (
     <div className={classNames(styles.header, 'container')}>
       <div className={styles.breadCrumbs}>
@@ -45,9 +45,9 @@ const AnalyticsHeader = ({ topic, totalCount, totalRes }) => {
           </p>
           <p className={styles.requestData}>
             Упоминаний в загаловках:
-            <span className={styles.requestDataItem}> {totalCount}</span>
+            <span className={styles.requestDataItem}> {totalCount()}</span>
           </p>
-        </div>{' '}
+        </div>
       </div>
     </div>
   );

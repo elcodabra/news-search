@@ -1,18 +1,18 @@
-const apiKey = '1bb2c66fe49f4cc8aae2c07724edd0bd';
+const apiKey = '398b8b05cfd74c32a83a9f12f6118f07';
 const topic = [];
 export const getInputValue = (newsTopic) => {
   topic.push(newsTopic);
 };
 const arrDateItem = [];
-for (let i = 0; i < 7; i++) {
+for (let i = 0; i < 7; i += 1) {
   const getDate = new Date(new Date().getTime() - (i * 24 * 60 * 60 * 1000)).toLocaleDateString('sv-SE');
   arrDateItem.push(getDate);
 }
-const gettingNews = async (e) => {
+const gettingNews = async () => {
   const topicItem = topic.pop();
   const url = `https://nomoreparties.co/news/v2/everything?q=${topicItem}&from=${arrDateItem[6]}&to=${arrDateItem[0]}&sortBy=publishedAt&pageSize=100&apiKey=${apiKey}`;
   const arrUrlItem = [];
-  for (let i = 6; i >= 0; i--) {
+  for (let i = 6; i >= 0; i -= 1) {
     const urlDay = `https://nomoreparties.co/news/v2/everything?q=${topicItem}&from=${arrDateItem[i]}&to=${arrDateItem[i]}&sortBy=publishedAt&pageSize=100&apiKey=${apiKey}`;
     arrUrlItem.push(urlDay);
   }
@@ -63,7 +63,7 @@ const gettingNews = async (e) => {
   return articles;
 };
 
-const gettingCommit = async (e) => {
+const gettingCommit = async () => {
   const reposUrl = 'https://api.github.com/repos/M-skyi/Test_Valencia_JS/commits?&&per_page=20';
   const response = await fetch(reposUrl);
   const data = await response.json();

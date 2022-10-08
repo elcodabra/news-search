@@ -16,7 +16,7 @@ const Header = ({ headerProps }) => {
   }, [pathName]);
   return (
     <div
-      className={pathName == '/' ? styles.headerWrapper : styles.headerAnalytic}
+      className={pathName === '/' ? styles.headerWrapper : styles.headerAnalytic}
     >
       <NavBar />
       <hr className={styles.line} />

@@ -1,11 +1,11 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import styles from '../../styles/HistoryCommits.module.css';
 import HistoryCarouselItem from './HistoryCarouselItem';
 
-import { setting } from './SettingsSlider';
+import setting from './SettingsSlider';
 import { changeDate } from '../../app/main';
 
 const HistoryCarousel = () => {

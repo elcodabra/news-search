@@ -17,7 +17,7 @@ const getDaysWeek = () => {
   const item = [];
   const dateCurrent = new Date();
 
-  for (let i = 6; i >= 0; i--) {
+  for (let i = 6; i >= 0; i -= 1) {
     const days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
     const tempDate = new Date();
     tempDate.setDate(dateCurrent.getDate() - i);
@@ -33,7 +33,7 @@ const changeImageItem = (image, changeImg) => {
   } else {
     const checkImgSrc = (src) => {
       const img = new Image();
-      img.onerror = function () {
+      img.onerror = function errorImg() {
         if (img.onerror) {
           changeImg('https://personabrd.com.ua/img/master/6e97727a-f2dd-4b33-9590-0b6d3bbff22d.png');
         }
@@ -65,8 +65,8 @@ function dataAnalytics() {
     const arrDataText = arrData.join('');
     let countTitle = 0;
     let pos = arrDataText.toLowerCase().indexOf(`${topic}`.toLowerCase());
-    while (pos != -1) {
-      countTitle++;
+    while (pos !== -1) {
+      countTitle += 1;
       pos = arrDataText.toLowerCase().indexOf(`${topic}`.toLowerCase(), pos + 1);
     }
     count.push(countTitle);
