@@ -1,4 +1,4 @@
-import Analytic from '../components/analytics/Analytic';
+import Analytic from '../components/analytics/analytic';
 
 const AnalyticsPage = () => (
   <div>
