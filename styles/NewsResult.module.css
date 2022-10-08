@@ -86,7 +86,7 @@
   margin-top: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: box;
+  display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
@@ -101,7 +101,7 @@
   color: var(--text-black-color);
   overflow: hidden;
   text-overflow: ellipsis;
-  display: box;
+  display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   height: 110px;
@@ -117,7 +117,7 @@
   margin: 18px 8px 24px;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: box;
+  display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   height: 20px;

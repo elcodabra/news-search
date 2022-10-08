@@ -16,15 +16,5 @@ module.exports = {
   rules: {
     indent: ['error', 2],
     'no-shadow': 'off',
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-   ]
   },
 };

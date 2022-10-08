@@ -110,7 +110,7 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   max-width: 320px;
-  display: box;
+  display: -webkit-box;
 }
 
 .email {
@@ -137,7 +137,7 @@
   margin-top: 16px;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: box;
+  display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
