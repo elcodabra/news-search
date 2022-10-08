@@ -1,8 +1,8 @@
 import Analytic from '../components/analytics/Analytic.js';
 
-const Analytics = () => (
+const AnalyticsPage = () => (
   <div>
     <Analytic />
   </div>
 );
-export default Analytics;
+export default AnalyticsPage;
