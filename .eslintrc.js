@@ -16,5 +16,9 @@ module.exports = {
   rules: {
     indent: ['error', 2],
     'no-shadow': 'off',
+    "import/no-unresolved": [
+      2, 
+      { "caseSensitive": false }
+   ]
   },
 };
