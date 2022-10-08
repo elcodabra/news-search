@@ -1,5 +1,5 @@
 import Author from '../components/author/Author';
-import HistoryCommits from '../components/historyCommits/Commits';
+import HistoryCommits from '../components/historyCommits/HistoryCommits.js';
 import Loader from '../components/loader/Loader';
 import Result from '../components/newsResult/Result';
 import NoFoundNews from '../components/noFoundNews/NoFoundNews';
