@@ -3,14 +3,6 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "paths": ["src"],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    },
-  },
   extends: [
     'airbnb/base',
     'eslint:recommended',
@@ -24,5 +16,6 @@ module.exports = {
   rules: {
     indent: ['error', 2],
     'no-shadow': 'off',
+    "import/no-unresolved": "off"
   },
 };
