@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import { useState, useCallback } from 'react';
-import Layout from '@/components/layout/Layout';
+import Layout from '../components/layout/Layout';
 
 function MyApp({ Component, pageProps }) {
   const [preloader, setPreloader] = useState(false);
